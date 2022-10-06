@@ -26,12 +26,11 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
 	protected WebDriver driver;
-	protected final Log log;
 
+	protected final Log log;
 	protected BaseTest() {
 		log = LogFactory.getLog(getClass());
 	}
-
 	public WebDriver getDriverInstance() {
 		return driver;
 	}
