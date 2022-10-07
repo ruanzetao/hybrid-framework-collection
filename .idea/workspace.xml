@@ -1,40 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: add Libraries and init Project">
-      <change afterPath="$PROJECT_DIR$/actions/commons/MethodListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/AllureTestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentReportListenerV2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentTestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ReportNGListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/DataHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/ExcelHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/JDBHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/JsonHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/MailHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/MySQLUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/SQLServerConnUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/SQLServerJTDSConnUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libExtentV2/bson-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libExtentV2/extentreports-2.41.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libExtentV2/freemarker-2.3.23.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libExtentV2/jsoup-1.8.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libExtentV2/mongodb-driver-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libExtentV2/mongodb-driver-core-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libExtentV2/sqlite-jdbc-3.8.11.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libExtentV2/testng-6.9.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libJavaFaker/commons-lang3-3.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libJavaFaker/generex-1.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libJavaFaker/javafaker-1.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libJavaFaker/snakeyaml-1.23.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/runNCTest_RegisterAccount_Allure.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_00_Check_Environment_Refactor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account_Faker.java" afterDir="false" />
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: apply Allure report">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hybrid-framework-collection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid-framework-collection.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/runNCTest_RegisterAccount_Allure.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/runNCTest_RegisterAccount_Allure.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,17 +39,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/eclipse-java/hybrid-framework-collection/libExtentV2/testng-6.9.9.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/eclipse-java/hybrid-framework-collection/libReportNG/commons-collections-3.2.1.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.import"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\eclipse-java\hybrid-framework-collection\libExtentV2" />
@@ -189,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665148454284</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Framework: apply Allure report">
+      <created>1665155448945</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665155448945</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +185,7 @@
     <MESSAGE value="Framework: init traditional hybrid framework collection" />
     <MESSAGE value="Framework: add libraries" />
     <MESSAGE value="Framework: add Libraries and init Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: add Libraries and init Project" />
+    <MESSAGE value="Framework: apply Allure report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: apply Allure report" />
   </component>
 </project>

@@ -22,9 +22,9 @@ public class Suite_01_Register_Account extends BaseTest {
 	@BeforeSuite
 	public void deleteAllFilesInAllureFolder(){
 		String folder="allure-results";
-		System.out.println("Start deleting Files in Allure Report");
+		System.out.println("----Start deleting Files in Allure Report----");
 		deleteAllFilesInFolder(folder);
-		System.out.println("End deleting Files in Allure Report");
+		System.out.println("----End deleting Files in Allure Report----");
 	}
 	@Parameters("browserName")
 	@BeforeClass
