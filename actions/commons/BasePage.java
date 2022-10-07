@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageUIs.nopcommerce.BasePageUI;
 
 import java.util.Date;
 import java.util.List;
@@ -505,20 +506,20 @@ public class BasePage {
 		action.sendKeys(getWebElement(driver, locatorType), key).perform();
 	}
 
-//	public void clickToRadioButtonByLabel(WebDriver driver, String checkboxLabelName) {
-//		waitForElementClickable(driver, BasePageUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, checkboxLabelName);
-//		checkDefaultCheckboxRadio(driver, BasePageUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, checkboxLabelName);
-//	}
-//
-//	public void clickToCheckboxByLabel(WebDriver driver, String checkboxLabelName) {
-//		waitForElementClickable(driver, BasePageUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
-//		checkDefaultCheckboxRadio(driver, BasePageUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
-//	}
-//
-//	public String getTextboxValueByID(WebDriver driver, String textboxID) {
-//		waitForElementVisible(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
-//		return getElementAttribute(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, "value", textboxID);
-//	}
+	public void clickToRadioButtonByLabel(WebDriver driver, String checkboxLabelName) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, checkboxLabelName);
+		checkDefaultCheckboxRadio(driver, BasePageUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, checkboxLabelName);
+	}
+
+	public void clickToCheckboxByLabel(WebDriver driver, String checkboxLabelName) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
+		checkDefaultCheckboxRadio(driver, BasePageUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
+	}
+
+	public String getTextboxValueByID(WebDriver driver, String textboxID) {
+		waitForElementVisible(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
+		return getElementAttribute(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, "value", textboxID);
+	}
 
 	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key, String... dynamicValues) {
 		Actions action = new Actions(driver);
@@ -547,20 +548,20 @@ public class BasePage {
 	}
 
 	//Pattern Objects
-//	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
-//		waitForAllElementsVisible(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
-//		sendKeyToElement(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxID);
-//	}
-//
-//	public void clickToButtonByText(WebDriver driver, String buttonText) {
-//		waitForElementClickable(driver, BasePageUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
-//		clickToElement(driver, BasePageUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
-//	}
-//
-//	public void selectDropdownByName(WebDriver driver, String dropdownAttribute, String itemValue) {
-//		waitForElementClickable(driver, BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownAttribute);
-//		selectItemDefaultDropdown(driver, BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownAttribute);
-//	}
+	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
+		waitForAllElementsVisible(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
+		sendKeyToElement(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxID);
+	}
+
+	public void clickToButtonByText(WebDriver driver, String buttonText) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+		clickToElement(driver, BasePageUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+	}
+
+	public void selectDropdownByName(WebDriver driver, String dropdownAttribute, String itemValue) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownAttribute);
+		selectItemDefaultDropdown(driver, BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownAttribute);
+	}
 
 }
 

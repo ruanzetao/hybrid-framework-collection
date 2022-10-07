@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="NopCommerce">
     <test name="Run on Firefox">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browserName" value="firefox"/>
 
         <classes>
             <class name="com.nopcommerce.user.Suite_00_Check_Environment"/>
