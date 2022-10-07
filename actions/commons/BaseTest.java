@@ -305,5 +305,21 @@ public class BaseTest {
 	public static long getRandomNumberByDateTime() {
 		return Calendar.getInstance().getTimeInMillis() % 100000;
 	}
+	public void deleteAllFilesInFolder(String folder){
+		try {
+			String workingDir= GlobalConstants.PROJECT_PATH;
+			String pathAllureResult=workingDir+ File.separator +folder;
+			File file=new File(pathAllureResult);
+			File[] listOfFiles=file.listFiles();
+			for (int i=0;i<listOfFiles.length;i++){
+				if(listOfFiles[i].isFile()){
+					System.out.println(listOfFiles[i].getName());
+					new File(listOfFiles[i].toString()).delete();
+				}
+			}
+		}catch (Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
 
 }

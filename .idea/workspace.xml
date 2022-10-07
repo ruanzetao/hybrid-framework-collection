@@ -1,55 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: add libraries">
-      <change afterPath="$PROJECT_DIR$/actions/commons/BROWSER.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/HomePageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/LoginPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/MyAccountPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/PageGeneratorManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/RegisterPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/BasePageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/HomePageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/LoginPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/MyAccountPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/RegisterPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/allure-java-commons-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/allure-model-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/allure-testng-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/aspectjlib-1.6.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/aspectjrt-1.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/aspectjtools-1.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/aspectjweaver-1.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/bsh-2.0b6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/byte-buddy-1.8.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/commons-exec-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/guava-25.0-jre.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/jackson-annotations-2.9.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/jackson-core-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/jackson-databind-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/jcommander-1.72.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/joor-java-8-0.9.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/okhttp-3.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/okio-1.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/slf4j-api-1.7.30.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libAllure/tika-core-1.20.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libReportNG/commons-collections-3.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libReportNG/guice-3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libReportNG/reportng-1.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libReportNG/velocity-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/allure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/log4j.dtd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/runNCTest_RegisterAccount.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_02_Login_Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_03_My_Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_04_Register_Login.java" afterDir="false" />
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: add Libraries and init Project">
+      <change afterPath="$PROJECT_DIR$/actions/commons/MethodListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/reportConfig/AllureTestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentReportListenerV2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentTestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ReportNGListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/utilities/DataHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/utilities/ExcelHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/utilities/JDBHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/utilities/JsonHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/utilities/MailHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/utilities/MySQLUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/utilities/SQLServerConnUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/utilities/SQLServerJTDSConnUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libExtentV2/bson-3.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libExtentV2/extentreports-2.41.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libExtentV2/freemarker-2.3.23.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libExtentV2/jsoup-1.8.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libExtentV2/mongodb-driver-3.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libExtentV2/mongodb-driver-core-3.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libExtentV2/sqlite-jdbc-3.8.11.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libExtentV2/testng-6.9.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libJavaFaker/commons-lang3-3.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libJavaFaker/generex-1.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libJavaFaker/javafaker-1.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libJavaFaker/snakeyaml-1.23.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/runNCTest_RegisterAccount_Allure.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_00_Check_Environment_Refactor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account_Faker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hybrid-framework-collection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid-framework-collection.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/runNCTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/runNCTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,33 +68,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/eclipse-java/hybrid-framework-collection/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/eclipse-java/hybrid-framework-collection/libExtentV2/testng-6.9.9.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\eclipse-java\hybrid-framework-collection\libExtentV2" />
+      <recent name="D:\eclipse-java\hybrid-framework-collection\actions\reportConfigs" />
+      <recent name="D:\eclipse-java\hybrid-framework-collection\actions\commons" />
       <recent name="D:\eclipse-java\hybrid-framework-collection\resources" />
-      <recent name="D:\eclipse-java\hybrid-framework-collection\libReportNG" />
-      <recent name="D:\eclipse-java\hybrid-framework-collection\testcases\com\nopcommerce\user" />
-      <recent name="D:\eclipse-java\hybrid-framework-collection\libAllure" />
-      <recent name="D:\eclipse-java\hybrid-framework-collection\actions\pageObjects\nopcommerce" />
+      <recent name="D:\eclipse-java\hybrid-framework-collection\libJavaFaker" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="commons" />
       <recent name="com.nopcommerce.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount.xml">
+  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount_Allure.xml">
     <configuration name="D:/eclipse-java/hybrid-framework-collection/out/production/hybrid-framework-collection/runNCTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <option name="SUITE_NAME" value="$PROJECT_DIR$/out/production/hybrid-framework-collection/runNCTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount_Allure.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-collection" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_RegisterAccount_Allure.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -155,6 +151,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount_Allure.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/out/production/hybrid-framework-collection/runNCTest.xml" />
@@ -185,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665071674672</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Framework: add Libraries and init Project">
+      <created>1665148454284</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665148454284</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +206,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Framework: init traditional hybrid framework collection" />
     <MESSAGE value="Framework: add libraries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: add libraries" />
+    <MESSAGE value="Framework: add Libraries and init Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: add Libraries and init Project" />
   </component>
 </project>

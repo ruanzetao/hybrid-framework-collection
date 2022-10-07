@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageUIs.nopcommerce.BasePageUI;
 
+import java.io.File;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -561,6 +562,23 @@ public class BasePage {
 	public void selectDropdownByName(WebDriver driver, String dropdownAttribute, String itemValue) {
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownAttribute);
 		selectItemDefaultDropdown(driver, BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownAttribute);
+	}
+
+	public void deleteAllFilesInFolder(){
+		try {
+			String workingDir= GlobalConstants.PROJECT_PATH;
+			String pathAllureResult=workingDir+ File.separator +"allure-results";
+			File file=new File(pathAllureResult);
+			File[] listOfFiles=file.listFiles();
+			for (int i=0;i<listOfFiles.length;i++){
+				if(listOfFiles[i].isFile()){
+					System.out.println(listOfFiles[i].getName());
+					new File(listOfFiles[i].toString()).delete();
+				}
+			}
+		}catch (Exception e){
+			System.out.println(e.getMessage());
+		}
 	}
 
 }
