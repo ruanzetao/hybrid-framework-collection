@@ -80,7 +80,7 @@ public class Suite_01_Register_Account extends BaseTest {
 		log.info("Step: input to all required Fields");
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
-		log.info("Step: input valid Email address"+validEmail);
+		log.info("Step: input valid Email address: "+validEmail);
 		registerPage.inputToEmailTextbox(validEmail);
 		registerPage.inputToPasswordTextbox(validPassword);
 		registerPage.inputToConfirmPasswordTextbox(validPassword);
@@ -145,7 +145,7 @@ public class Suite_01_Register_Account extends BaseTest {
 		registerPage.inputToPasswordTextbox(invalidPassword);
 		log.info("Step: input to ConfirmPassword textbox");
 		registerPage.inputToConfirmPasswordTextbox("Abc@123");
-		log.info("Step: click to Register button");
+		log.info("Step: click to Register button.");
 		registerPage.clickToRegisterButton();
 		Assert.assertEquals(registerPage.getConfirmPasswordErrorMessage(), "The password and confirmation password do not match.");
 	}
