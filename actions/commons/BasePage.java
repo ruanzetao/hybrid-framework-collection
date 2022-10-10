@@ -7,6 +7,10 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.nopcommerce.LoginPageObject;
+import pageObjects.nopcommerce.MyAccountPageObject;
+import pageObjects.nopcommerce.PageGeneratorManager;
+import pageObjects.nopcommerce.RegisterPageObject;
 import pageUIs.nopcommerce.BasePageUI;
 
 import java.util.Date;
@@ -561,6 +565,25 @@ public class BasePage {
 	public void selectDropdownByName(WebDriver driver, String dropdownAttribute, String itemValue) {
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownAttribute);
 		selectItemDefaultDropdown(driver, BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownAttribute);
+	}
+	//Common functions:
+
+	public RegisterPageObject clickToRegisterLink(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.REGISTER_LINK);
+		clickToElement(driver, BasePageUI.REGISTER_LINK);
+		return PageGeneratorManager.getRegisterPage(driver);
+	}
+
+	public LoginPageObject clickToLoginLink(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.LOGIN_LINK);
+		clickToElement(driver, BasePageUI.LOGIN_LINK);
+		return PageGeneratorManager.getLoginPage(driver);
+	}
+
+	public MyAccountPageObject clickToMyAccountLink(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.MY_ACCOUNT_LINK);
+		clickToElement(driver, BasePageUI.MY_ACCOUNT_LINK);
+		return PageGeneratorManager.getMyAccountPage(driver);
 	}
 }
 
