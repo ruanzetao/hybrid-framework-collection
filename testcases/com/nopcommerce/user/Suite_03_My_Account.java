@@ -79,6 +79,7 @@ public class Suite_03_My_Account extends BaseTest {
 
 	@Test
 	public void TC_02_Add_Address() {
+		//init TCs
 	}
 
 	@Test
