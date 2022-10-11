@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="NopCommerce">
+    <test name="Run on Firefox">
+        <parameter name="browserName" value="firefox"/>
+
+        <classes>
+            <class name="com.nopcommerce.user.Suite_03_My_Account"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

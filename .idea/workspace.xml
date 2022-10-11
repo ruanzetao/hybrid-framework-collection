@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: fix bugs">
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: init TCs">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/AddressesPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/TemplatePageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/AddressesPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/runNCTest_MyAccount.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/runNCTest_Register_Login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/MyAccountPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/MyAccountPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/PageGeneratorManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_03_My_Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_03_My_Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_04_Register_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_04_Register_Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +21,13 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,7 +56,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/eclipse-java/hybrid-framework-collection/libReportNG/commons-collections-3.2.1.jar",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/eclipse-java/hybrid-framework-collection/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -49,20 +66,22 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\eclipse-java\hybrid-framework-collection\resources" />
       <recent name="D:\eclipse-java\hybrid-framework-collection\libExtentV2" />
       <recent name="D:\eclipse-java\hybrid-framework-collection\actions\reportConfigs" />
       <recent name="D:\eclipse-java\hybrid-framework-collection\actions\commons" />
-      <recent name="D:\eclipse-java\hybrid-framework-collection\resources" />
       <recent name="D:\eclipse-java\hybrid-framework-collection\libJavaFaker" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pageUIs.nopcommerce" />
       <recent name="commons" />
       <recent name="com.nopcommerce.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount_Allure.xml">
-    <configuration name="D:/eclipse-java/hybrid-framework-collection/out/production/hybrid-framework-collection/runNCTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/out/production/hybrid-framework-collection/runNCTest.xml" />
+  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_MyAccount.xml">
+    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_MyAccount.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-collection" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_MyAccount.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -90,9 +109,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Register_Login.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -100,7 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Suite_00_Check_Environment" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Suite_03_My_Account.TC_02_Add_Address" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
       <extension name="coverage">
         <pattern>
@@ -109,8 +128,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.nopcommerce.user" />
-      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.user.Suite_00_Check_Environment" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.user.Suite_03_My_Account" />
+      <option name="METHOD_NAME" value="TC_02_Add_Address" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -119,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_MyAccount.xml" />
+        <item itemvalue="TestNG.Suite_03_My_Account.TC_02_Add_Address" />
+        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount_Allure.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount.xml" />
-        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest.xml" />
-        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/out/production/hybrid-framework-collection/runNCTest.xml" />
-        <item itemvalue="TestNG.Suite_00_Check_Environment" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665373855466</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Framework: init TCs">
+      <created>1665464728507</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665464728507</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +232,7 @@
     <MESSAGE value="Framework: add Libraries and init Project" />
     <MESSAGE value="Framework: apply Allure report" />
     <MESSAGE value="Framework: fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: fix bugs" />
+    <MESSAGE value="Framework: init TCs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: init TCs" />
   </component>
 </project>

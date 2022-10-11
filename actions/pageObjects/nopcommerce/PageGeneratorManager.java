@@ -20,4 +20,8 @@ public class PageGeneratorManager {
 		return new MyAccountPageObject(driver);
 	}
 
+	public static AddressesPageObject getAddressesPage(WebDriver driver) {
+		return new AddressesPageObject(driver);
+	}
+
 }

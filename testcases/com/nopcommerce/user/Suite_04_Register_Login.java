@@ -18,10 +18,10 @@ public class Suite_04_Register_Login extends BaseTest {
 	private LoginPageObject loginPage;
 	String firstName = "Nguyen";
 	String lastName = "XSang";
-	String validEmail = "xansan" + generateFakeNumber() + "@mailinator.com";
+	String validEmail = "seleniumonline" + generateFakeNumber() + "@mailinator.com";
 	String validPassword = "Abc@123";
 
-	@Parameters("browser")
+	@Parameters("browserName")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		System.out.println("Browser name: " + browserName);
@@ -55,10 +55,10 @@ public class Suite_04_Register_Login extends BaseTest {
 	}
 
 	@Test
-	public void TC_06_Valid_Email_Valid_Password() {
+	public void TC_06_Login_Valid_Email_Valid_Password() {
 		log.info("Step: click to Login link");
 		loginPage = homePage.clickToLoginLink();
-		log.info("Step: input to Email textbox" + validEmail);
+		log.info("Step: input to Email textbox: " + validEmail);
 		loginPage.inputToEmailTextbox(validEmail);
 		log.info("Step: input to Password textbox: " + validPassword);
 		loginPage.inputToPasswordTextbox(validPassword);

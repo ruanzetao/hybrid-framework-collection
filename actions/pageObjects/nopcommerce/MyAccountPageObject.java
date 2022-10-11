@@ -41,19 +41,16 @@ public class MyAccountPageObject extends BasePage {
 	}
 
 	public void selectDayDropdown(String day) {
-		//scrollToElement(driver, MyAccountPageUI.DATE_OF_BIRTH_DROPDOWN);
 		waitForElementClickable(driver, MyAccountPageUI.DATE_OF_BIRTH_DROPDOWN);
 		selectItemDefaultDropdown(driver, MyAccountPageUI.DATE_OF_BIRTH_DROPDOWN, day);
 	}
 
 	public void selectMonthDropdown(String month) {
-		//scrollToElement(driver, MyAccountPageUI.MONTH_OF_BIRTH_DROPDOWN);
 		waitForElementClickable(driver, MyAccountPageUI.MONTH_OF_BIRTH_DROPDOWN);
 		selectItemDefaultDropdown(driver, MyAccountPageUI.MONTH_OF_BIRTH_DROPDOWN, month);
 	}
 
 	public void selectYearDropdown(String year) {
-		//scrollToElement(driver, MyAccountPageUI.YEAR_OF_BIRTH_DROPDOWN);
 		waitForElementClickable(driver, MyAccountPageUI.YEAR_OF_BIRTH_DROPDOWN);
 		selectItemDefaultDropdown(driver, MyAccountPageUI.YEAR_OF_BIRTH_DROPDOWN, year);
 	}
@@ -71,6 +68,11 @@ public class MyAccountPageObject extends BasePage {
 	public void clickToSaveButton() {
 		waitForElementClickable(driver, MyAccountPageUI.SAVE_BUTTON);
 		clickToElement(driver, MyAccountPageUI.SAVE_BUTTON);
+	}
+
+	public void openMyAccountMenuByName(WebDriver driver, String pageName) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
+		clickToElement(driver, BasePageUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
 	}
 
 }

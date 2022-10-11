@@ -14,9 +14,10 @@ public class Suite_03_My_Account extends BaseTest {
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;
 	private MyAccountPageObject myAccountPage;
+	private AddressesPageObject addressPage;
 	String firstName, lastName, validEmail, validPassword;
 
-	@Parameters("browser")
+	@Parameters("browserName")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		System.out.println("Browser name: " + browserName);
@@ -79,11 +80,35 @@ public class Suite_03_My_Account extends BaseTest {
 
 	@Test
 	public void TC_02_Add_Address() {
-		//init TCs
+		log.info("Step: open My Account menu: Addresses");
+		myAccountPage.openMyAccountMenuByName(driver,"Addresses");
+		log.info("Step: change driver to Addresses page");
+		addressPage=PageGeneratorManager.getAddressesPage(driver);
+		log.info("Step: click to Add New button");
+		addressPage.clickToAddNewButton();
+		log.info("Step: input to required Fields");
+		addressPage.inputToFirstNameTextbox("Automation");
+		addressPage.inputToLastNameTextbox("FC");
+		addressPage.inputToEmailTextbox("automationfc@mailinator.com");
+		addressPage.inputToCompanyTextbox("Company FC");
+		addressPage.selectCountryDropdown("Viet Nam");
+		addressPage.selectStateDropdown("Other");
+		addressPage.inputToCityTextbox("City");
+		addressPage.inputToAddress1Textbox("Address 1");
+		addressPage.inputToAddress2Textbox("Address 2");
+		addressPage.inputToZipPostalTextbox("700000");
+		addressPage.inputToPhoneNumberTextbox("0932658717");
+		addressPage.inputToFaxNumberTextbox("1111658717");
+		log.info("Step: click to Save button");
+		addressPage.clickToSaveButton();
+		log.info("Step: assert the Results");
 	}
+
 
 	@Test
 	public void TC_03_Change_Password() {
+		log.info("Step: open My Account menu: Addresses");
+		myAccountPage.openMyAccountMenuByName(driver,"Change password");
 	}
 
 	@Test
