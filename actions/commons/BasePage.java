@@ -507,6 +507,16 @@ public class BasePage {
 		action.sendKeys(getWebElement(driver, locatorType), key).perform();
 	}
 
+	public void hoverOnElement(WebDriver driver, String xpathLocator) {
+		Actions action = new Actions(driver);
+		action.moveToElement(getWebElement(driver, xpathLocator)).perform();
+	}
+
+	public void hoverOnElement(WebDriver driver, String locatorType, String... dynamicValues) {
+		Actions action = new Actions(driver);
+		action.moveToElement(getWebElement(driver, generateDynamicXpath(locatorType, dynamicValues))).perform();
+	}
+
 	public void clickToRadioButtonByLabel(WebDriver driver, String checkboxLabelName) {
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, checkboxLabelName);
 		checkDefaultCheckboxRadio(driver, BasePageUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, checkboxLabelName);
@@ -576,6 +586,7 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.LOGIN_LINK);
 		return PageGeneratorManager.getLoginPage(driver);
 	}
+
 	public HomePageObject clickToLogoutLink(WebDriver driver) {
 		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
 		clickToElement(driver, BasePageUI.LOGOUT_LINK);
@@ -588,6 +599,17 @@ public class BasePage {
 		return PageGeneratorManager.getMyAccountPage(driver);
 	}
 
+	public ProductByTypePageObject selectProductTypeByHeader(WebDriver driver, String category, String productType) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_PRODUCT_TYPE_BY_HEADER, category, productType);
+		clickToElement(driver, BasePageUI.DYNAMIC_PRODUCT_TYPE_BY_HEADER, category, productType);
+		return PageGeneratorManager.getProductByTypePage(driver);
+	}
+
+	public ProductDetailPageObject clickToProductNameLink(WebDriver driver, String product) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_PRODUCT_BY_NAME, product);
+		clickToElement(driver, BasePageUI.DYNAMIC_PRODUCT_BY_NAME, product);
+		return PageGeneratorManager.getProductDetailPage(driver);
+	}
 
 }
 

@@ -2,6 +2,7 @@ package com.nopcommerce.user;
 
 import commons.BaseTest;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -15,7 +16,10 @@ public class Suite_03_My_Account extends BaseTest {
 	private MyAccountPageObject myAccountPage;
 	private AddressesPageObject addressPage;
 	private ChangePasswordPageObject changePasswordPage;
-	String firstName, lastName, validEmail, validPassword,newPassword;
+	private ProductByTypePageObject productByTypePage;
+	private ProductDetailPageObject productDetailPage;
+	private ProductReviewsPageObject productReviewsPage;
+	String firstName, lastName, validEmail, validPassword, newPassword;
 
 	@Parameters("browserName")
 	@BeforeClass
@@ -81,9 +85,9 @@ public class Suite_03_My_Account extends BaseTest {
 	@Test
 	public void TC_02_Add_Address() {
 		log.info("Step: open My Account menu: Addresses");
-		myAccountPage.openMyAccountMenuByName(driver,"Addresses");
+		myAccountPage.openMyAccountMenuByName(driver, "Addresses");
 		log.info("Step: change driver to Addresses page");
-		addressPage=PageGeneratorManager.getAddressesPage(driver);
+		addressPage = PageGeneratorManager.getAddressesPage(driver);
 		log.info("Step: click to Add New button");
 		addressPage.clickToAddNewButton();
 		log.info("Step: input to required Fields");
@@ -103,44 +107,53 @@ public class Suite_03_My_Account extends BaseTest {
 		addressPage.clickToSaveButton();
 		log.info("Step: assert the Results");
 	}
+//	@Test
+//	public void TC_03_Change_Password() {
+//		log.info("Step: open My Account menu: Change Password");
+//		myAccountPage.openMyAccountMenuByName(driver, "Change password");
+//		changePasswordPage = PageGeneratorManager.getChangePasswordPage(driver);
+//		log.info("Step: input to mandatory Fields");
+//		changePasswordPage.inputToOldPassword(validPassword);
+//		newPassword = "Abc@124";
+//		changePasswordPage.inputToNewPassword(newPassword);
+//		changePasswordPage.inputToConfirmPassword(newPassword);
+//		changePasswordPage.clickToChangePasswordButton();
+//		changePasswordPage.clickToCloseButton();
+//		log.info("Step: Logout and Login again");
+//		homePage = changePasswordPage.clickToLogoutLink(driver);
+//		loginPage = homePage.clickToLoginLink(driver);
+//		log.info("Step: Login with Old Password.");
+//		loginPage.inputToEmailTextbox(validEmail);
+//		loginPage.inputToPasswordTextbox(validPassword);
+//		log.info("Step: assert the Results");
+//		log.info("Step: Login with New Password.");
+//		loginPage.refreshCurrentPage(driver);
+//		loginPage.inputToEmailTextbox(validEmail);
+//		loginPage.inputToPasswordTextbox(newPassword);
+//		log.info("Step: assert the Results");
+//	}
 
-
-	@Test
-	public void TC_03_Change_Password() {
-		log.info("Step: open My Account menu: Change Password");
-		myAccountPage.openMyAccountMenuByName(driver,"Change password");
-		changePasswordPage=PageGeneratorManager.getChangePasswordPage(driver);
-		log.info("Step: input to mandatory Fields");
-		changePasswordPage.inputToOldPassword(validPassword);
-		newPassword="Abc@124";
-		changePasswordPage.inputToNewPassword(newPassword);
-		changePasswordPage.inputToConfirmPassword(newPassword);
-		changePasswordPage.clickToChangePasswordButton();
-		changePasswordPage.clickToCloseButton();
-		changePasswordPage.sleepInSecond(3);
-		changePasswordPage.refreshCurrentPage(driver);
-		changePasswordPage.acceptAlert(driver);
-		log.info("Step: Logout and Login again");
-		homePage=changePasswordPage.clickToLogoutLink(driver);
-		loginPage=homePage.clickToLoginLink(driver);
-		log.info("Step: Login with Old Password.");
-		loginPage.inputToEmailTextbox(validEmail);
-		loginPage.inputToPasswordTextbox(validPassword);
-		log.info("Step: assert the Results");
-		log.info("Step: Login with New Password.");
-		loginPage.refreshCurrentPage(driver);
-		loginPage.inputToEmailTextbox(validEmail);
-		loginPage.inputToPasswordTextbox(newPassword);
-		log.info("Step: assert the Results");
-	}
-
+	//Category > Prod Type > Product
 	@Test
 	public void TC_04_My_Product_Reviews() {
+		log.info("Step: hover on Product Category.");
+		addressPage.hoverOnProductCategoryByHeader("Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Desktops");
+		log.info("Step: select Product by Name");
+		productDetailPage = productByTypePage.clickToProductNameLink("Lenovo IdeaCentre 600 All-in-One PC");
+		log.info("Step: click to Add your review button.");
+		productReviewsPage = productDetailPage.clickToAddYourReviewLink();
+		log.info("Step: input to madatory Fields.");
+		productReviewsPage.inputToReviewTitle("Title Title");
+		productReviewsPage.inputToReviewText("Review Text 1111");
+//		productReviewsPage.selectRating("ratingValue");
+//		productReviewsPage.clickToSubmitReviewButton();
 	}
 
-//	@AfterClass(alwaysRun = true)
-//	public void afterClass() {
-//		closeBrowserAndDriver();
-//	}
+	@AfterClass(alwaysRun = true)
+	public void afterClass() {
+		closeBrowserAndDriver();
+	}
 
 }

@@ -14,5 +14,11 @@ public class BasePageUI {
 	public static final String DYNAMIC_DROPDOWN_BY_NAME = "xpath=//select[@name='%s']";
 	public static final String DYNAMIC_RADIO_BUTTON_BY_LABEL = "xpath=//label[text()='%s']/preceding-sibling::input";
 	public static final String DYNAMIC_CHECKBOX_BY_LABEL = "xpath=//label[contains(text(),'%s')]/following-sibling::input";
+	public static final String DYNAMIC_PRODUCT_TYPE_BY_HEADER = "xpath=//ul[@class='top-menu notmobile']//li[a[text()" +
+			                                                            "[normalize-space()='%s']]]//a[text()" +
+			                                                            "[normalize-space()='%s']]";
+	public static final String DYNAMIC_PRODUCT_BY_NAME = "xpath=//a[text()='%s']";
+	public static final String PRODUCT_CATEGORY_LABEL_HEADER = "xpath=//ul[@class='top-menu notmobile']//a[text()" +
+			                                                           "[normalize-space()='%s']]";
 
 }

@@ -3,11 +3,14 @@ package pageObjects.nopcommerce;
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageUIs.nopcommerce.AddressesPageUI;
+import pageUIs.nopcommerce.BasePageUI;
 
 public class AddressesPageObject extends BasePage {
+
 	private WebDriver driver;
+
 	public AddressesPageObject(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 	}
 
 	public void clickToAddNewButton() {
@@ -78,6 +81,11 @@ public class AddressesPageObject extends BasePage {
 	public void clickToSaveButton() {
 		waitForElementClickable(driver, AddressesPageUI.SAVE_BUTTON);
 		clickToElement(driver, AddressesPageUI.SAVE_BUTTON);
+	}
+
+	public void hoverOnProductCategoryByHeader(String productCategory) {
+		waitForElementClickable(driver, BasePageUI.PRODUCT_CATEGORY_LABEL_HEADER, productCategory);
+		hoverOnElement(driver, BasePageUI.PRODUCT_CATEGORY_LABEL_HEADER, productCategory);
 	}
 
 }

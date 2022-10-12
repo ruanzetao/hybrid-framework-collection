@@ -28,4 +28,18 @@ public class PageGeneratorManager {
 		return new ChangePasswordPageObject(driver);
 	}
 
+	public static ComputersPageObject getComputersPage(WebDriver driver) {
+		return new ComputersPageObject(driver);
+	}
+	public static ProductByTypePageObject getProductByTypePage(WebDriver driver) {
+		return new ProductByTypePageObject(driver);
+	}
+	public static ProductDetailPageObject getProductDetailPage(WebDriver driver) {
+		return new ProductDetailPageObject(driver);
+	}
+	public static ProductReviewsPageObject getProductReviewsPage(WebDriver driver) {
+		return new ProductReviewsPageObject(driver);
+	}
+
+
 }

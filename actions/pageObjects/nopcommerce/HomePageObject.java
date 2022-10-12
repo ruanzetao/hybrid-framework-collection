@@ -36,4 +36,10 @@ public class HomePageObject extends BasePage {
 		return PageGeneratorManager.getMyAccountPage(driver);
 	}
 
+	public ProductByTypePageObject selectProductTypeByHeader(String category, String productType) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_PRODUCT_TYPE_BY_HEADER, category, productType);
+		clickToElement(driver, BasePageUI.DYNAMIC_PRODUCT_TYPE_BY_HEADER, category, productType);
+		return PageGeneratorManager.getProductByTypePage(driver);
+	}
+
 }

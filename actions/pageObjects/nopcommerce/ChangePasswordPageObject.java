@@ -34,6 +34,7 @@ public class ChangePasswordPageObject extends BasePage {
 	public void clickToCloseButton() {
 		waitForElementClickable(driver, ChangePasswordPageUI.CLOSE_CHANGE_PASSWORD_BUTTON);
 		clickToElement(driver, ChangePasswordPageUI.CLOSE_CHANGE_PASSWORD_BUTTON);
+		waitForElementInvisible(driver, ChangePasswordPageUI.CLOSE_CHANGE_PASSWORD_BUTTON);
 	}
 
 }
