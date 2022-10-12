@@ -2,7 +2,6 @@ package com.nopcommerce.user;
 
 import commons.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -15,7 +14,8 @@ public class Suite_03_My_Account extends BaseTest {
 	private LoginPageObject loginPage;
 	private MyAccountPageObject myAccountPage;
 	private AddressesPageObject addressPage;
-	String firstName, lastName, validEmail, validPassword;
+	private ChangePasswordPageObject changePasswordPage;
+	String firstName, lastName, validEmail, validPassword,newPassword;
 
 	@Parameters("browserName")
 	@BeforeClass
@@ -89,7 +89,7 @@ public class Suite_03_My_Account extends BaseTest {
 		log.info("Step: input to required Fields");
 		addressPage.inputToFirstNameTextbox("Automation");
 		addressPage.inputToLastNameTextbox("FC");
-		addressPage.inputToEmailTextbox("automationfc@mailinator.com");
+		addressPage.inputToEmailTextbox(validEmail);
 		addressPage.inputToCompanyTextbox("Company FC");
 		addressPage.selectCountryDropdown("Viet Nam");
 		addressPage.selectStateDropdown("Other");
@@ -107,17 +107,40 @@ public class Suite_03_My_Account extends BaseTest {
 
 	@Test
 	public void TC_03_Change_Password() {
-		log.info("Step: open My Account menu: Addresses");
+		log.info("Step: open My Account menu: Change Password");
 		myAccountPage.openMyAccountMenuByName(driver,"Change password");
+		changePasswordPage=PageGeneratorManager.getChangePasswordPage(driver);
+		log.info("Step: input to mandatory Fields");
+		changePasswordPage.inputToOldPassword(validPassword);
+		newPassword="Abc@124";
+		changePasswordPage.inputToNewPassword(newPassword);
+		changePasswordPage.inputToConfirmPassword(newPassword);
+		changePasswordPage.clickToChangePasswordButton();
+		changePasswordPage.clickToCloseButton();
+		changePasswordPage.sleepInSecond(3);
+		changePasswordPage.refreshCurrentPage(driver);
+		changePasswordPage.acceptAlert(driver);
+		log.info("Step: Logout and Login again");
+		homePage=changePasswordPage.clickToLogoutLink(driver);
+		loginPage=homePage.clickToLoginLink(driver);
+		log.info("Step: Login with Old Password.");
+		loginPage.inputToEmailTextbox(validEmail);
+		loginPage.inputToPasswordTextbox(validPassword);
+		log.info("Step: assert the Results");
+		log.info("Step: Login with New Password.");
+		loginPage.refreshCurrentPage(driver);
+		loginPage.inputToEmailTextbox(validEmail);
+		loginPage.inputToPasswordTextbox(newPassword);
+		log.info("Step: assert the Results");
 	}
 
 	@Test
 	public void TC_04_My_Product_Reviews() {
 	}
 
-	@AfterClass(alwaysRun = true)
-	public void afterClass() {
-		closeBrowserAndDriver();
-	}
+//	@AfterClass(alwaysRun = true)
+//	public void afterClass() {
+//		closeBrowserAndDriver();
+//	}
 
 }

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: init TCs">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/AddressesPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/TemplatePageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/AddressesPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/runNCTest_MyAccount.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/runNCTest_Register_Login.xml" afterDir="false" />
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs for My Account">
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ChangePasswordPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ChangePasswordPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/TemplatePageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/MyAccountPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/MyAccountPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/PageGeneratorManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_03_My_Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_03_My_Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_04_Register_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_04_Register_Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +70,7 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pageUIs.nopcommerce" />
+      <recent name="pageObjects.nopcommerce" />
       <recent name="commons" />
       <recent name="com.nopcommerce.user" />
     </key>
@@ -92,16 +89,6 @@
     <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount_Allure.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_RegisterAccount_Allure.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="hybrid-framework-collection" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_RegisterAccount.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -137,13 +124,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Suite_03_My_Account.TC_03_Change_Password" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nopcommerce.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nopcommerce.user" />
+      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.user.Suite_03_My_Account" />
+      <option name="METHOD_NAME" value="TC_03_Change_Password" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_MyAccount.xml" />
+        <item itemvalue="TestNG.Suite_03_My_Account.TC_03_Change_Password" />
         <item itemvalue="TestNG.Suite_03_My_Account.TC_02_Add_Address" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount_Allure.xml" />
-        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665464728507</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Framework: update TCs for My Account">
+      <created>1665502640999</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665502640999</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +245,7 @@
     <MESSAGE value="Framework: apply Allure report" />
     <MESSAGE value="Framework: fix bugs" />
     <MESSAGE value="Framework: init TCs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: init TCs" />
+    <MESSAGE value="Framework: update TCs for My Account" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TCs for My Account" />
   </component>
 </project>

@@ -7,10 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.nopcommerce.LoginPageObject;
-import pageObjects.nopcommerce.MyAccountPageObject;
-import pageObjects.nopcommerce.PageGeneratorManager;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.nopcommerce.*;
 import pageUIs.nopcommerce.BasePageUI;
 
 import java.util.Date;
@@ -49,7 +46,7 @@ public class BasePage {
 		driver.navigate().forward();
 	}
 
-	protected void refreshCurrentPage(WebDriver driver) {
+	public void refreshCurrentPage(WebDriver driver) {
 		driver.navigate().refresh();
 	}
 
@@ -58,7 +55,7 @@ public class BasePage {
 		return explicitWait.until(ExpectedConditions.alertIsPresent());
 	}
 
-	protected void acceptAlert(WebDriver driver) {
+	public void acceptAlert(WebDriver driver) {
 		Alert alert = waitForAlertPresence(driver);
 		alert.accept();
 	}
@@ -579,11 +576,18 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.LOGIN_LINK);
 		return PageGeneratorManager.getLoginPage(driver);
 	}
+	public HomePageObject clickToLogoutLink(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
+		clickToElement(driver, BasePageUI.LOGOUT_LINK);
+		return PageGeneratorManager.getHomePage(driver);
+	}
 
 	public MyAccountPageObject clickToMyAccountLink(WebDriver driver) {
 		waitForElementClickable(driver, BasePageUI.MY_ACCOUNT_LINK);
 		clickToElement(driver, BasePageUI.MY_ACCOUNT_LINK);
 		return PageGeneratorManager.getMyAccountPage(driver);
 	}
+
+
 }
 
