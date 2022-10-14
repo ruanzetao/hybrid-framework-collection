@@ -17,6 +17,7 @@ public class Suite_05_Search extends BaseTest {
 
 	@Test
 	public void TC_01_GetCurrentPageTitle() {
+		//init TCs
 		driver.getTitle();
 	}
 
