@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: init TCs for Search function">
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs for Search function">
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/SearchPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/SearchPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/runNCTest_Search_Function.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/HomePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/HomePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/PageGeneratorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/HomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/HomePageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_05_Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_05_Search.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,13 +73,13 @@
       <recent name="D:\eclipse-java\hybrid-framework-collection\libJavaFaker" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.nopcommerce.user" />
       <recent name="pageUIs.nopcommerce" />
       <recent name="pageObjects.nopcommerce" />
+      <recent name="com.nopcommerce.user" />
       <recent name="commons" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_MyAccount.xml">
+  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Search_Function.xml">
     <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_MyAccount.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_MyAccount.xml" />
@@ -84,19 +90,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount_Allure.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Search_Function.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_RegisterAccount_Allure.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="hybrid-framework-collection" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Register_Login.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Search_Function.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -140,13 +136,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Suite_05_Search" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nopcommerce.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nopcommerce.user" />
+      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.user.Suite_05_Search" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Search_Function.xml" />
+        <item itemvalue="TestNG.Suite_05_Search" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_MyAccount.xml" />
         <item itemvalue="TestNG.Suite_03_My_Account.TC_03_Change_Password" />
         <item itemvalue="TestNG.Suite_03_My_Account.TC_02_Add_Address" />
-        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" />
-        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_RegisterAccount_Allure.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665636129823</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Framework: update TCs for Search function">
+      <created>1665758456273</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665758456273</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +286,7 @@
     <MESSAGE value="Framework: init TCs" />
     <MESSAGE value="Framework: update TCs for My Account" />
     <MESSAGE value="Framework: init TCs for Search function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: init TCs for Search function" />
+    <MESSAGE value="Framework: update TCs for Search function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TCs for Search function" />
   </component>
 </project>
