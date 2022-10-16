@@ -9,5 +9,7 @@ public class SearchPageUI {
 	public static final String SEARCH_ERROR_MESSAGE = "xpath=//div[@class='search-results']//div[@class='warning']";
 	public static final String SEARCH_NO_RESULT_ERROR_MESSAGE = "xpath=//div[@class='no-result']";
 	public static final String RETURNED_PRODUCT_TITLE = "xpath=//div[@class='search-results']//h2[@class='product-title']//a";
+	public static final String ADVANCED_SEARCH_CHECKBOX = "xpath=//label[text()='Advanced search' and @for='advs']";
+	public static final String CATEGORY_DROPDOWN = "xpath=//select[@id='cid']";
 
 }

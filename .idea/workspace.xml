@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs for Search function">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/SearchPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/SearchPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/SearchPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/SearchPageUI.java" afterDir="false" />
@@ -267,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665809735030</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Framework: update TCs for Search function">
+      <created>1665909695499</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665909695499</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

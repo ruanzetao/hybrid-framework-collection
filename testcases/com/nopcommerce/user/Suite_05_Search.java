@@ -101,8 +101,19 @@ public class Suite_05_Search extends BaseTest {
 
 	@Test
 	public void TC_05_Search_Advanced_Parent_Categories() {
+		String keyword = "Apple Macbook Pro";
+		System.out.println("Keyword: " + keyword);
 		//init TCs
-		driver.getTitle();
+		log.info("Step: click to Search Hyperlink at Footer");
+		searchPage = homePage.clickToFooterSearchLink();
+		log.info("Step: enter Keywords to Search Keywords textbox");
+		searchPage.inputToSearchKeywordsTextbox(keyword);
+		searchPage.checkToAdvancedSearchCheckbox();
+		searchPage.selectCategoryDropdown("Computers");
+		log.info("Step: click to Search button.");
+		searchPage.clickToSearchButton();
+		log.info("Step: verify the Result.");
+		verifyEquals(searchPage.getSearchNoResultErrorMessage(), "No products were found that matched your criteria.");
 	}
 
 	@Test

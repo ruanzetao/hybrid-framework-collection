@@ -65,4 +65,14 @@ public class SearchPageObject extends BasePage {
 		return checkTrue;
 	}
 
+	public void checkToAdvancedSearchCheckbox() {
+		waitForElementClickable(driver, SearchPageUI.ADVANCED_SEARCH_CHECKBOX);
+		checkDefaultCheckboxRadio(driver, SearchPageUI.ADVANCED_SEARCH_CHECKBOX);
+	}
+
+	public void selectCategoryDropdown(String category) {
+		waitForElementClickable(driver, SearchPageUI.CATEGORY_DROPDOWN);
+		selectItemDefaultDropdown(driver, SearchPageUI.CATEGORY_DROPDOWN, category);
+	}
+
 }
