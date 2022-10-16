@@ -2,7 +2,10 @@ package pageObjects.nopcommerce;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pageUIs.nopcommerce.SearchPageUI;
+
+import java.util.List;
 
 public class SearchPageObject extends BasePage {
 
@@ -25,6 +28,41 @@ public class SearchPageObject extends BasePage {
 	public String getSearchErrorMessage() {
 		waitForElementVisible(driver, SearchPageUI.SEARCH_ERROR_MESSAGE);
 		return getWebElement(driver, SearchPageUI.SEARCH_ERROR_MESSAGE).getText();
+	}
+
+	public String getSearchNoResultErrorMessage() {
+		waitForElementVisible(driver, SearchPageUI.SEARCH_NO_RESULT_ERROR_MESSAGE);
+		return getWebElement(driver, SearchPageUI.SEARCH_NO_RESULT_ERROR_MESSAGE).getText();
+	}
+
+	public boolean isReturnedProductsContainsKeyword(String keyword) {
+		boolean checkTrue = true;
+		List<WebElement> returnedProducts = getListWebElement(driver, SearchPageUI.RETURNED_PRODUCT_TITLE);
+		System.out.println("Total of Returned Products list: " + returnedProducts.size());
+		for (WebElement product : returnedProducts) {
+			if (product.getText().toLowerCase().contains(keyword.toLowerCase())) {
+				checkTrue = true;
+			} else {
+				checkTrue = false;
+				break;
+			}
+		}
+		return checkTrue;
+	}
+
+	public boolean isReturnedProductsContainsKeywordCaseSensitive(String keyword) {
+		boolean checkTrue = true;
+		List<WebElement> returnedProducts = getListWebElement(driver, SearchPageUI.RETURNED_PRODUCT_TITLE);
+		System.out.println("Total of Returned Products list: " + returnedProducts.size());
+		for (WebElement product : returnedProducts) {
+			if (product.getText().contains(keyword)) {
+				checkTrue = true;
+			} else {
+				checkTrue = false;
+				break;
+			}
+		}
+		return checkTrue;
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.nopcommerce.user;
 
 import commons.BaseTest;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -58,19 +59,44 @@ public class Suite_05_Search extends BaseTest {
 	@Test
 	public void TC_02_Search_Data_Not_Existed() {
 		//init TCs
-		driver.getTitle();
+		log.info("Step: click to Search Hyperlink at Footer");
+		searchPage = homePage.clickToFooterSearchLink();
+		log.info("Step: enter Keywords to Search Keywords textbox");
+		searchPage.inputToSearchKeywordsTextbox("Macbook Pro 2050");
+		log.info("Step: click to Search button.");
+		searchPage.clickToSearchButton();
+		log.info("Step: verify the Result.");
+		verifyEquals(searchPage.getSearchNoResultErrorMessage(), "No products were found that matched your criteria.");
 	}
 
 	@Test
 	public void TC_03_Search_Relative_Product_Name() {
+		String keyword = "Lenovo";
+		System.out.println("Keyword: " + keyword);
 		//init TCs
-		driver.getTitle();
+		log.info("Step: click to Search Hyperlink at Footer");
+		searchPage = homePage.clickToFooterSearchLink();
+		log.info("Step: enter Keywords to Search Keywords textbox");
+		searchPage.inputToSearchKeywordsTextbox(keyword);
+		log.info("Step: click to Search button.");
+		searchPage.clickToSearchButton();
+		log.info("Step: verify the Result contains Keyword.");
+		verifyTrue(searchPage.isReturnedProductsContainsKeyword(keyword));
 	}
 
 	@Test
 	public void TC_04_Search_Absolute_Product_Name() {
+		String keyword = "Thinkpad X1 Carbon";
+		System.out.println("Keyword: " + keyword);
 		//init TCs
-		driver.getTitle();
+		log.info("Step: click to Search Hyperlink at Footer");
+		searchPage = homePage.clickToFooterSearchLink();
+		log.info("Step: enter Keywords to Search Keywords textbox");
+		searchPage.inputToSearchKeywordsTextbox(keyword);
+		log.info("Step: click to Search button.");
+		searchPage.clickToSearchButton();
+		log.info("Step: verify the Result contains Keyword.");
+		verifyTrue(searchPage.isReturnedProductsContainsKeyword(keyword));
 	}
 
 	@Test
@@ -96,8 +122,10 @@ public class Suite_05_Search extends BaseTest {
 		//init TCs
 		driver.getTitle();
 	}
-//	@AfterClass(alwaysRun = true)
-//	public void afterClass() {
-//		closeBrowserAndDriver();
-//	}
+
+	@AfterClass(alwaysRun = true)
+	public void afterClass() {
+		closeBrowserAndDriver();
+	}
+
 }
