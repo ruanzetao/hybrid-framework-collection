@@ -118,20 +118,58 @@ public class Suite_05_Search extends BaseTest {
 
 	@Test
 	public void TC_06_Search_Advanced_Sub_Categories() {
+		String keyword = "Apple Macbook Pro";
+		System.out.println("Keyword: " + keyword);
 		//init TCs
-		driver.getTitle();
+		log.info("Step: click to Search Hyperlink at Footer");
+		searchPage = homePage.clickToFooterSearchLink();
+		log.info("Step: enter Keywords to Search Keywords textbox");
+		searchPage.inputToSearchKeywordsTextbox(keyword);
+		searchPage.checkToAdvancedSearchCheckbox();
+		searchPage.selectCategoryDropdown("Computers");
+		searchPage.checkToAutomaticSearchSubCategory();
+		log.info("Step: click to Search button.");
+		searchPage.clickToSearchButton();
+		log.info("Step: verify the Result.");
+		verifyTrue(searchPage.isReturnedProductsContainsKeyword(keyword));
 	}
 
 	@Test
 	public void TC_07_Search_Advanced_Incorrect_Manufacturer() {
+		String keyword = "Apple Macbook Pro";
+		System.out.println("Keyword: " + keyword);
 		//init TCs
-		driver.getTitle();
+		log.info("Step: click to Search Hyperlink at Footer");
+		searchPage = homePage.clickToFooterSearchLink();
+		log.info("Step: enter Keywords to Search Keywords textbox");
+		searchPage.inputToSearchKeywordsTextbox(keyword);
+		searchPage.checkToAdvancedSearchCheckbox();
+		searchPage.selectCategoryDropdown("Computers");
+		searchPage.checkToAutomaticSearchSubCategory();
+		searchPage.selectManufacturerDropdown("HP");
+		log.info("Step: click to Search button.");
+		searchPage.clickToSearchButton();
+		log.info("Step: verify the Result.");
+		verifyEquals(searchPage.getSearchNoResultErrorMessage(), "No products were found that matched your criteria.");
 	}
 
 	@Test
 	public void TC_08_Search_Advanced_Correct_Manufacturer() {
+		String keyword = "Apple Macbook Pro";
+		System.out.println("Keyword: " + keyword);
 		//init TCs
-		driver.getTitle();
+		log.info("Step: click to Search Hyperlink at Footer");
+		searchPage = homePage.clickToFooterSearchLink();
+		log.info("Step: enter Keywords to Search Keywords textbox");
+		searchPage.inputToSearchKeywordsTextbox(keyword);
+		searchPage.checkToAdvancedSearchCheckbox();
+		searchPage.selectCategoryDropdown("Computers");
+		searchPage.checkToAutomaticSearchSubCategory();
+		searchPage.selectManufacturerDropdown("Apple");
+		log.info("Step: click to Search button.");
+		searchPage.clickToSearchButton();
+		log.info("Step: verify the Result.");
+		verifyTrue(searchPage.isReturnedProductsContainsKeyword(keyword));
 	}
 
 	@AfterClass(alwaysRun = true)

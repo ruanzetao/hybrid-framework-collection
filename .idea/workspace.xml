@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs for Search function">
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs 05 for Search function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/SearchPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/SearchPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/SearchPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/SearchPageUI.java" afterDir="false" />
@@ -273,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665909695499</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Framework: update TCs 05 for Search function">
+      <created>1665910533639</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1665910533639</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,6 +304,7 @@
     <MESSAGE value="Framework: update TCs for My Account" />
     <MESSAGE value="Framework: init TCs for Search function" />
     <MESSAGE value="Framework: update TCs for Search function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TCs for Search function" />
+    <MESSAGE value="Framework: update TCs 05 for Search function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TCs 05 for Search function" />
   </component>
 </project>

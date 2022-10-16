@@ -75,4 +75,14 @@ public class SearchPageObject extends BasePage {
 		selectItemDefaultDropdown(driver, SearchPageUI.CATEGORY_DROPDOWN, category);
 	}
 
+	public void checkToAutomaticSearchSubCategory() {
+		waitForElementClickable(driver, SearchPageUI.AUTOMATIC_SEARCH_SUB_CATEGORIES_CHECKBOX);
+		checkDefaultCheckboxRadio(driver, SearchPageUI.AUTOMATIC_SEARCH_SUB_CATEGORIES_CHECKBOX);
+	}
+
+	public void selectManufacturerDropdown(String manufacturer) {
+		waitForElementClickable(driver, SearchPageUI.MANUFACTURER_DROPDOWN);
+		selectItemDefaultDropdown(driver, SearchPageUI.MANUFACTURER_DROPDOWN, manufacturer);
+	}
+
 }

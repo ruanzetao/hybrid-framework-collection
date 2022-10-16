@@ -10,6 +10,8 @@ public class SearchPageUI {
 	public static final String SEARCH_NO_RESULT_ERROR_MESSAGE = "xpath=//div[@class='no-result']";
 	public static final String RETURNED_PRODUCT_TITLE = "xpath=//div[@class='search-results']//h2[@class='product-title']//a";
 	public static final String ADVANCED_SEARCH_CHECKBOX = "xpath=//label[text()='Advanced search' and @for='advs']";
+	public static final String AUTOMATIC_SEARCH_SUB_CATEGORIES_CHECKBOX = "xpath=//label[text()='Automatically search sub categories' and @for='isc']";
 	public static final String CATEGORY_DROPDOWN = "xpath=//select[@id='cid']";
+	public static final String MANUFACTURER_DROPDOWN = "xpath=//select[@id='mid']";
 
 }
