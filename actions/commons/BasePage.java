@@ -611,5 +611,10 @@ public class BasePage {
 		return PageGeneratorManager.getProductDetailPage(driver);
 	}
 
+	public void hoverOnProductCategoryByHeader(WebDriver driver, String productCategory) {
+		waitForElementClickable(driver, BasePageUI.PRODUCT_CATEGORY_LABEL_HEADER, productCategory);
+		hoverOnElement(driver, BasePageUI.PRODUCT_CATEGORY_LABEL_HEADER, productCategory);
+	}
+
 }
 

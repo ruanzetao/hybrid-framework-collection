@@ -5,16 +5,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.PageGeneratorManager;
-import pageObjects.nopcommerce.RegisterPageObject;
-import pageObjects.nopcommerce.SearchPageObject;
+import pageObjects.nopcommerce.*;
 
 public class Suite_06_Sort_Display extends BaseTest {
 
 	private HomePageObject homePage;
 	private SearchPageObject searchPage;
 	private RegisterPageObject registerPage;
+	private ProductByTypePageObject productByTypePage;
 	String firstName, lastName, validEmail, validPassword;
 
 	@Parameters("browserName")
@@ -46,12 +44,24 @@ public class Suite_06_Sort_Display extends BaseTest {
 
 	@Test
 	public void TC_01_Sort_Name_A_To_Z() {
-		//init TCs
+		log.info("Step: hover on Category header menu.");
+		homePage.hoverOnProductCategoryByHeader(driver, "Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Notebooks");
+		productByTypePage.selectSortByDropdown("Name: A to Z");
+		log.info("Step: verify the Result is in alphabetical order");
+		verifyTrue(productByTypePage.isListProductsAToZ());
 	}
 
 	@Test
 	public void TC_02_Sort_Name_Z_To_A() {
-		driver.getTitle();
+		log.info("Step: hover on Category header menu.");
+		homePage.hoverOnProductCategoryByHeader(driver, "Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Notebooks");
+		productByTypePage.selectSortByDropdown("Name: Z to A");
+		log.info("Step: verify the Result is in reverse-alphabetical order");
+		verifyTrue(productByTypePage.isListProductsZToA());
 	}
 
 	@Test
