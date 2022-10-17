@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update all TCs for Search function">
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_06_Sort_Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: int TCs for Sort and Paging">
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_06_Sort_Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_06_Sort_Display.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665921217505</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Framework: int TCs for Sort and Paging">
+      <created>1665972182220</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1665972182220</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,6 +317,7 @@
     <MESSAGE value="Framework: update TCs for Search function" />
     <MESSAGE value="Framework: update TCs 05 for Search function" />
     <MESSAGE value="Framework: update all TCs for Search function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: update all TCs for Search function" />
+    <MESSAGE value="Framework: int TCs for Sort and Paging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: int TCs for Sort and Paging" />
   </component>
 </project>

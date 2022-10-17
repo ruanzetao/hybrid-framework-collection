@@ -46,7 +46,7 @@ public class Suite_06_Sort_Display extends BaseTest {
 
 	@Test
 	public void TC_01_Sort_Name_A_To_Z() {
-		driver.getTitle();
+		//init TCs
 	}
 
 	@Test
