@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import pageUIs.nopcommerce.BasePageUI;
 import pageUIs.nopcommerce.ProductByTypePageUI;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductByTypePageObject extends BasePage {
@@ -25,6 +26,7 @@ public class ProductByTypePageObject extends BasePage {
 	public void selectSortByDropdown(String sortBy) {
 		waitForElementClickable(driver, ProductByTypePageUI.SORT_BY_DROPDOWN);
 		selectItemDefaultDropdown(driver, ProductByTypePageUI.SORT_BY_DROPDOWN, sortBy);
+		sleepInSecond(3);
 	}
 
 	public boolean isListProductsAToZ() {
@@ -62,7 +64,7 @@ public class ProductByTypePageObject extends BasePage {
 	public boolean isListProductsPriceLowToHigh() {
 		boolean checkTrue = true;
 		List<WebElement> allProducts = getListWebElement(driver, ProductByTypePageUI.PRODUCT_PRICES);
-		List<Float> newPrices = removeCurrencyInString(allProducts);
+		ArrayList<Float> newPrices = removeSpecialCharactersInString(allProducts);
 		for (int index = 0; index < newPrices.size() - 1; index++) {
 			if (newPrices.get(index) < newPrices.get(index + 1)) {
 				return checkTrue = true;
@@ -70,15 +72,22 @@ public class ProductByTypePageObject extends BasePage {
 				return checkTrue = true;
 			} else {
 				checkTrue = false;
+				break;
 			}
 		}
 		return checkTrue;
 	}
 
-	public List<Float> removeCurrencyInString(List<WebElement> allProducts) {
-		List<Float> newList = null;
+	public ArrayList<Float> removeSpecialCharactersInString(List<WebElement> allProducts) {
+		ArrayList<Float> newList = new ArrayList<>();
 		for (int index = 0; index < allProducts.size() - 1; index++) {
-			newList.add(Float.parseFloat(allProducts.get(index).getText().replace("$", "")));
+			System.out.println("Before text: " + allProducts.get(index).getText() + " Index: " + index);
+			String cleanPrice = allProducts.get(index).getText();
+			cleanPrice = cleanPrice.replace("$", "").replace(",", "");
+//			cleanPrice = cleanPrice.replace(",", "");
+//			Float floatCleanPrice = Float.parseFloat(cleanPrice);
+			System.out.println("Clean price: " + cleanPrice);
+			newList.add(Float.parseFloat(cleanPrice));
 		}
 		return newList;
 	}

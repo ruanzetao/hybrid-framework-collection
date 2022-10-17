@@ -72,7 +72,7 @@ public class Suite_06_Sort_Display extends BaseTest {
 		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Notebooks");
 		productByTypePage.selectSortByDropdown("Price: Low to High");
 		log.info("Step: verify the Price is low to high");
-//		verifyTrue(productByTypePage.isListProductsPriceLowToHigh());
+		verifyTrue(productByTypePage.isListProductsPriceLowToHigh());
 	}
 
 	@Test
