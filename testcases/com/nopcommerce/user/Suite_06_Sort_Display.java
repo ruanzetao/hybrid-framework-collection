@@ -66,7 +66,13 @@ public class Suite_06_Sort_Display extends BaseTest {
 
 	@Test
 	public void TC_03_Sort_Price_Low_To_High() {
-		driver.getTitle();
+		log.info("Step: hover on Category header menu.");
+		homePage.hoverOnProductCategoryByHeader(driver, "Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Notebooks");
+		productByTypePage.selectSortByDropdown("Price: Low to High");
+		log.info("Step: verify the Price is low to high");
+//		verifyTrue(productByTypePage.isListProductsPriceLowToHigh());
 	}
 
 	@Test
@@ -76,17 +82,32 @@ public class Suite_06_Sort_Display extends BaseTest {
 
 	@Test
 	public void TC_05_Display_3_Product_Per_Page() {
-		driver.getTitle();
+		log.info("Step: hover on Category header menu.");
+		homePage.hoverOnProductCategoryByHeader(driver, "Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Notebooks");
+		productByTypePage.selectDisplayDropdown("3");
+		verifyTrue(productByTypePage.isDisplayNumberItemPerPage(3));
 	}
 
 	@Test
 	public void TC_06_Display_6_Product_Per_Page() {
-		driver.getTitle();
+		log.info("Step: hover on Category header menu.");
+		homePage.hoverOnProductCategoryByHeader(driver, "Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Notebooks");
+		productByTypePage.selectDisplayDropdown("6");
+		verifyTrue(productByTypePage.isDisplayNumberItemPerPage(6));
 	}
 
 	@Test
 	public void TC_07_Display_9_Product_Per_Page() {
-		driver.getTitle();
+		log.info("Step: hover on Category header menu.");
+		homePage.hoverOnProductCategoryByHeader(driver, "Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Notebooks");
+		productByTypePage.selectDisplayDropdown("9");
+		verifyTrue(productByTypePage.isDisplayNumberItemPerPage(9));
 	}
 
 	@AfterClass(alwaysRun = true)

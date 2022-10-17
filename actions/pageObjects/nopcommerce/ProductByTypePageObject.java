@@ -29,7 +29,7 @@ public class ProductByTypePageObject extends BasePage {
 
 	public boolean isListProductsAToZ() {
 		boolean checkTrue = true;
-		List<WebElement> allProducts = getListWebElement(driver, ProductByTypePageUI.PRODUCT_TITLE);
+		List<WebElement> allProducts = getListWebElement(driver, ProductByTypePageUI.PRODUCT_TITLES);
 		for (int index = 0; index < allProducts.size() - 1; index++) {
 			if (allProducts.get(index).getText().toUpperCase().charAt(0) < allProducts.get(index + 1).getText().toUpperCase().charAt(0)) {
 				checkTrue = true;
@@ -45,7 +45,7 @@ public class ProductByTypePageObject extends BasePage {
 
 	public boolean isListProductsZToA() {
 		boolean checkTrue = true;
-		List<WebElement> allProducts = getListWebElement(driver, ProductByTypePageUI.PRODUCT_TITLE);
+		List<WebElement> allProducts = getListWebElement(driver, ProductByTypePageUI.PRODUCT_TITLES);
 		for (int index = 0; index < allProducts.size() - 1; index++) {
 			if (allProducts.get(index).getText().toUpperCase().charAt(0) > allProducts.get(index + 1).getText().toUpperCase().charAt(0)) {
 				checkTrue = true;
@@ -57,6 +57,42 @@ public class ProductByTypePageObject extends BasePage {
 			}
 		}
 		return checkTrue;
+	}
+
+	public boolean isListProductsPriceLowToHigh() {
+		boolean checkTrue = true;
+		List<WebElement> allProducts = getListWebElement(driver, ProductByTypePageUI.PRODUCT_PRICES);
+		List<Float> newPrices = removeCurrencyInString(allProducts);
+		for (int index = 0; index < newPrices.size() - 1; index++) {
+			if (newPrices.get(index) < newPrices.get(index + 1)) {
+				return checkTrue = true;
+			} else if (newPrices.get(index) == newPrices.get(index + 1)) {
+				return checkTrue = true;
+			} else {
+				checkTrue = false;
+			}
+		}
+		return checkTrue;
+	}
+
+	public List<Float> removeCurrencyInString(List<WebElement> allProducts) {
+		List<Float> newList = null;
+		for (int index = 0; index < allProducts.size() - 1; index++) {
+			newList.add(Float.parseFloat(allProducts.get(index).getText().replace("$", "")));
+		}
+		return newList;
+	}
+
+	public void selectDisplayDropdown(String number) {
+		waitForElementClickable(driver, ProductByTypePageUI.DISPLAY_DROPDOWN);
+		selectItemDefaultDropdown(driver, ProductByTypePageUI.DISPLAY_DROPDOWN, number);
+		sleepInSecond(3);
+	}
+
+	public boolean isDisplayNumberItemPerPage(int number) {
+		List<WebElement> allProduct = getListWebElement(driver, ProductByTypePageUI.PRODUCT_TITLES);
+		System.out.println("Size: " + allProduct.size());
+		return allProduct.size() == number;
 	}
 
 }
