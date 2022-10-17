@@ -93,6 +93,7 @@ public class ProductByTypePageObject extends BasePage {
 		List<WebElement> allProduct = getListWebElement(driver, ProductByTypePageUI.PRODUCT_TITLES);
 		System.out.println("Size: " + allProduct.size());
 		return allProduct.size() == number;
+		//update something
 	}
 
 }
