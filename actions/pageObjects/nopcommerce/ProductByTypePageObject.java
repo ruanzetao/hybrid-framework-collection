@@ -78,6 +78,23 @@ public class ProductByTypePageObject extends BasePage {
 		return checkTrue;
 	}
 
+	public boolean isListProductsPriceHighToLow() {
+		boolean checkTrue = true;
+		List<WebElement> allProducts = getListWebElement(driver, ProductByTypePageUI.PRODUCT_PRICES);
+		ArrayList<Float> newPrices = removeSpecialCharactersInString(allProducts);
+		for (int index = 0; index > newPrices.size() - 1; index++) {
+			if (newPrices.get(index) > newPrices.get(index + 1)) {
+				return checkTrue = true;
+			} else if (newPrices.get(index) == newPrices.get(index + 1)) {
+				return checkTrue = true;
+			} else {
+				checkTrue = false;
+				break;
+			}
+		}
+		return checkTrue;
+	}
+
 	public ArrayList<Float> removeSpecialCharactersInString(List<WebElement> allProducts) {
 		ArrayList<Float> newList = new ArrayList<>();
 		for (int index = 0; index < allProducts.size() - 1; index++) {

@@ -77,7 +77,13 @@ public class Suite_06_Sort_Display extends BaseTest {
 
 	@Test
 	public void TC_04_Sort_Price_High_To_Low() {
-		driver.getTitle();
+		log.info("Step: hover on Category header menu.");
+		homePage.hoverOnProductCategoryByHeader(driver, "Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Notebooks");
+		productByTypePage.selectSortByDropdown("Price: High to Low");
+		log.info("Step: verify the Price is High to Low");
+		verifyTrue(productByTypePage.isListProductsPriceHighToLow());
 	}
 
 	@Test
