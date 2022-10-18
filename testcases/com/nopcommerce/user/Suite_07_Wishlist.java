@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class Suite_07_Wishlist extends BaseTest {
 
-	@Parameters("browser")
+	@Parameters("browserName")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		System.out.println("Browser name: " + browserName);
@@ -17,6 +17,7 @@ public class Suite_07_Wishlist extends BaseTest {
 
 	@Test
 	public void TC_01_GetCurrentPageTitle() {
+		//update something
 		driver.getTitle();
 	}
 

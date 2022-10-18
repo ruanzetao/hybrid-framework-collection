@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update all TCs for sorting and paging">
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: init TCs for Wishlist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_07_Wishlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_07_Wishlist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +67,8 @@
       <recent name="D:\eclipse-java\hybrid-framework-collection\libJavaFaker" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="pageUIs.nopcommerce" />
       <recent name="com.nopcommerce.user" />
+      <recent name="pageUIs.nopcommerce" />
       <recent name="pageObjects.nopcommerce" />
       <recent name="commons" />
     </key>
@@ -325,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666021164887</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Framework: init TCs for Wishlist">
+      <created>1666056629912</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1666056629913</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,6 +364,7 @@
     <MESSAGE value="Framework: update sorting TCs" />
     <MESSAGE value="Framework: update sorting and paging TCs" />
     <MESSAGE value="Framework: update all TCs for sorting and paging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: update all TCs for sorting and paging" />
+    <MESSAGE value="Framework: init TCs for Wishlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: init TCs for Wishlist" />
   </component>
 </project>
