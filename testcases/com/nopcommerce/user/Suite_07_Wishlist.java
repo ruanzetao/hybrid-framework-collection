@@ -5,14 +5,19 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageObjects.nopcommerce.HomePageObject;
+import pageObjects.nopcommerce.PageGeneratorManager;
 
 public class Suite_07_Wishlist extends BaseTest {
+
+	private HomePageObject homePage;
 
 	@Parameters("browserName")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		System.out.println("Browser name: " + browserName);
 		getBrowserDriver(browserName);
+		homePage = PageGeneratorManager.getHomePage(driver);
 	}
 
 	@Test

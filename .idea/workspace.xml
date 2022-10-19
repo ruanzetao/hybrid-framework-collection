@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: init TCs for Wishlist">
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs for Wishlist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_07_Wishlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_07_Wishlist.java" afterDir="false" />
     </list>
@@ -333,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666056629913</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Framework: update TCs for Wishlist">
+      <created>1666100327277</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1666100327277</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -365,6 +372,7 @@
     <MESSAGE value="Framework: update sorting and paging TCs" />
     <MESSAGE value="Framework: update all TCs for sorting and paging" />
     <MESSAGE value="Framework: init TCs for Wishlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: init TCs for Wishlist" />
+    <MESSAGE value="Framework: update TCs for Wishlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TCs for Wishlist" />
   </component>
 </project>
