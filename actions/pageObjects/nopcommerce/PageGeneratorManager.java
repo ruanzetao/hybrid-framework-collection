@@ -48,4 +48,8 @@ public class PageGeneratorManager {
 		return new SearchPageObject(driver);
 	}
 
+	public static ShoppingCartPageObject getShoppingCartPage(WebDriver driver) {
+		return new ShoppingCartPageObject(driver);
+	}
+
 }

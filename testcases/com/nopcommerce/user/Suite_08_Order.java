@@ -13,13 +13,12 @@ public class Suite_08_Order extends BaseTest {
 	private RegisterPageObject registerPage;
 	private ProductByTypePageObject productByTypePage;
 	private ProductDetailPageObject productDetailPage;
+	private ShoppingCartPageObject shoppingCartPage;
 	String firstName, lastName, validEmail, validPassword;
 
 	@Parameters("browserName")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		System.out.println("Browser name: " + browserName);
-		getBrowserDriver(browserName);
 		System.out.println("Browser name: " + browserName);
 		getBrowserDriver(browserName);
 		homePage = PageGeneratorManager.getHomePage(driver);
@@ -46,10 +45,24 @@ public class Suite_08_Order extends BaseTest {
 
 	@Test
 	public void TC_01_Order_Add_Product_To_Cart() {
+		log.info("Step: hover on Category header menu.");
+		homePage.hoverOnProductCategoryByHeader(driver, "Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Desktops");
+		productDetailPage = productByTypePage.clickToProductNameLink("Build your own computer");
+		productDetailPage.selectProcessorDropdown("2.2 GHz Intel Pentium Dual-Core E2200");
+		productDetailPage.selectRamDropdown("2 GB");
+		productDetailPage.selectHDDRadio("320 GB");
+		productDetailPage.selectOSRadio("Vista Premium [+$60.00]");
+		productDetailPage.selectSoftwareCheckbox("Total Commander [+$5.00]");
+		productDetailPage.clickToAddToCartButton();
+		verifyEquals(productDetailPage.isAddToCartSuccessMessageDisplayed(), "The product has been added to your shopping cart");
+//		productDetailPage.clickToCloseButton();
 	}
 
 	@Test
 	public void TC_02_Order_Edit_Product_In_Shopping_Cart() {
+		shoppingCartPage = productDetailPage.selectShoppingCartLink();
 	}
 
 	@Test
