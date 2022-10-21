@@ -57,12 +57,21 @@ public class Suite_08_Order extends BaseTest {
 		productDetailPage.selectSoftwareCheckbox("Total Commander [+$5.00]");
 		productDetailPage.clickToAddToCartButton();
 		verifyEquals(productDetailPage.isAddToCartSuccessMessageDisplayed(), "The product has been added to your shopping cart");
+		productDetailPage.waitForNotificationBarDisappeared();
 //		productDetailPage.clickToCloseButton();
 	}
 
 	@Test
 	public void TC_02_Order_Edit_Product_In_Shopping_Cart() {
 		shoppingCartPage = productDetailPage.selectShoppingCartLink();
+		productDetailPage = shoppingCartPage.clickToEditButton();
+		productDetailPage.selectProcessorDropdown("2.5 GHz Intel Pentium Dual-Core E2200 [+$15.00]");
+		productDetailPage.selectRamDropdown("4GB [+$20.00]");
+		productDetailPage.selectHDDRadio("400 GB [+$100.00]");
+		productDetailPage.selectOSRadio("Vista Home [+$50.00]");
+		productDetailPage.selectSoftwareCheckbox("Acrobat Reader [+$10.00]");
+		productDetailPage.clickToUpdateButton();
+		productDetailPage.clickToCloseUpdateButton();
 	}
 
 	@Test

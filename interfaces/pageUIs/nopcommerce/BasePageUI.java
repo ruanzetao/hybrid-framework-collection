@@ -7,6 +7,7 @@ public class BasePageUI {
 	public static final String LOGOUT_LINK = "xpath=//a[@class='ico-logout']";
 	public static final String LOGIN_LINK = "xpath=//a[@class='ico-login']";
 	public static final String MY_ACCOUNT_LINK = "xpath=//a[@class='ico-account']";
+	public static final String SHOPPING_CART_LINK = "xpath=//a[@class='ico-cart']";
 	//Pattern Objects
 	public static final String DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA = "xpath=//div[contains(@class,'account-navigation')]//a[text()='%s']";
 	public static final String DYNAMIC_TEXTBOX_BY_ID = "xpath=//input[@id='%s']";

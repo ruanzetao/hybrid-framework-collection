@@ -8,6 +8,8 @@ public class ProductDetailPageUI {
 	public static final String ADD_TO_CART_BUTTON = "xpath=//button[@id='add-to-cart-button-1']";
 	public static final String ADD_TO_CART_SUCCESS_MESSAGE = "xpath=//div[@id='bar-notification']//p";
 	public static final String CLOSE_BUTTON = "xpath=//button[@title='Close']";
+	public static final String CLOSE_UPDATE_BUTTON = "xpath=//span[@title='Close']";
+	public static final String UPDATE_BUTTON = "xpath=//button[@id='add-to-cart-button-1']";
 	public static final String ADD_TO_WISHLIST_SUCCESS_MESSAGE = "xpath=//p[@class='content']";
 	public static final String PROCESSOR_DROPDOWN = "xpath=//select[@id='product_attribute_1']";
 	public static final String RAM_DROPDOWN = "xpath=//select[@id='product_attribute_2']";

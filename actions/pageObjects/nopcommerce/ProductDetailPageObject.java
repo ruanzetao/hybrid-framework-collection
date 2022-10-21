@@ -2,6 +2,7 @@ package pageObjects.nopcommerce;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
+import pageUIs.nopcommerce.BasePageUI;
 import pageUIs.nopcommerce.ProductDetailPageUI;
 
 public class ProductDetailPageObject extends BasePage {
@@ -56,6 +57,7 @@ public class ProductDetailPageObject extends BasePage {
 	public void clickToAddToCartButton() {
 		waitForElementClickable(driver, ProductDetailPageUI.ADD_TO_CART_BUTTON);
 		clickToElement(driver, ProductDetailPageUI.ADD_TO_CART_BUTTON);
+//		waitForElementInvisible(driver, ProductDetailPageUI.CLOSE_BUTTON);
 	}
 
 	public void clickToCloseButton() {
@@ -70,7 +72,23 @@ public class ProductDetailPageObject extends BasePage {
 	}
 
 	public ShoppingCartPageObject selectShoppingCartLink() {
-		return null;
+		waitForElementClickable(driver, BasePageUI.SHOPPING_CART_LINK);
+		clickToElement(driver, BasePageUI.SHOPPING_CART_LINK);
+		return PageGeneratorManager.getShoppingCartPage(driver);
+	}
+
+	public void clickToUpdateButton() {
+		waitForElementClickable(driver, ProductDetailPageUI.UPDATE_BUTTON);
+		clickToElement(driver, ProductDetailPageUI.UPDATE_BUTTON);
+	}
+
+	public void clickToCloseUpdateButton() {
+		waitForElementClickable(driver, ProductDetailPageUI.CLOSE_UPDATE_BUTTON);
+		clickToElement(driver, ProductDetailPageUI.CLOSE_UPDATE_BUTTON);
+	}
+
+	public void waitForNotificationBarDisappeared() {
+		waitForElementInvisible(driver, ProductDetailPageUI.CLOSE_BUTTON);
 	}
 
 }
