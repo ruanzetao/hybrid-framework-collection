@@ -76,14 +76,45 @@ public class Suite_08_Order extends BaseTest {
 
 	@Test
 	public void TC_03_Order_Remove_From_Cart() {
+		shoppingCartPage = productDetailPage.selectShoppingCartLink();
+		shoppingCartPage.clickToRemoveButton();
+		verifyEquals(shoppingCartPage.getRemoveProductFromCartDisplayed(), "Your Shopping Cart is empty!");
 	}
 
 	@Test
 	public void TC_04_Order_Update_Product_From_Cart() {
+		log.info("Step: hover on Category header menu.");
+		homePage.hoverOnProductCategoryByHeader(driver, "Computers");
+		log.info("Step: select Product Type by Header");
+		productByTypePage = homePage.selectProductTypeByHeader("Computers", "Desktops");
+		productDetailPage = productByTypePage.clickToProductNameLink("Build your own computer");
+		productDetailPage.selectProcessorDropdown("2.2 GHz Intel Pentium Dual-Core E2200");
+		productDetailPage.selectRamDropdown("2 GB");
+		productDetailPage.selectHDDRadio("320 GB");
+		productDetailPage.selectOSRadio("Vista Premium [+$60.00]");
+		productDetailPage.selectSoftwareCheckbox("Total Commander [+$5.00]");
+		productDetailPage.clickToAddToCartButton();
+		verifyEquals(productDetailPage.isAddToCartSuccessMessageDisplayed(), "The product has been added to your shopping cart");
+		productDetailPage.waitForNotificationBarDisappeared();
+		log.info("Step: move to Shopping Cart page.");
+		shoppingCartPage = productDetailPage.selectShoppingCartLink();
+		shoppingCartPage.inputToQuantityTextbox("5");
+		log.info("Step: click to Update button");
+		shoppingCartPage.clickToUpdateShoppingCartButton();
+		log.info("Step: Done!.");
 	}
 
 	@Test
 	public void TC_05_Order_Payment_Method_Cheque() {
+		shoppingCartPage.selectGiftWrappingDropdown("No");
+		shoppingCartPage.checkToAgreeTermCheckbox();
+		shoppingCartPage.clickToCheckoutButton();
+		shoppingCartPage.selectCountryDropdown("Viet Nam");
+		shoppingCartPage.selectStateProvinceDropdown("Other (Non US)");
+		shoppingCartPage.inputToCityTextbox("City");
+		shoppingCartPage.inputToAddress1Textbox("Address1");
+		shoppingCartPage.inputToZipPostalCodeTextbox("550000");
+		shoppingCartPage.inputToPhoneNumberTextbox("0932658888");
 	}
 
 	@Test

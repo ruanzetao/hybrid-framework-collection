@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs for Add to Cart function">
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ShoppingCartPageUI.java" afterDir="false" />
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TC 02 for Add to Cart function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ProductDetailPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ProductDetailPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ShoppingCartPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ShoppingCartPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/BasePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/BasePageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ProductDetailPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ProductDetailPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ShoppingCartPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ShoppingCartPageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_08_Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_08_Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -372,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666349074157</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Framework: update TC 02 for Add to Cart function">
+      <created>1666361236642</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1666361236642</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -408,6 +413,7 @@
     <MESSAGE value="Framework: init TCs for Order function" />
     <MESSAGE value="Framework: update TCs for Order function" />
     <MESSAGE value="Framework: update TCs for Add to Cart function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TCs for Add to Cart function" />
+    <MESSAGE value="Framework: update TC 02 for Add to Cart function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TC 02 for Add to Cart function" />
   </component>
 </project>

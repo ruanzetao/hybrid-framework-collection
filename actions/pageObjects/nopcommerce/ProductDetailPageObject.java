@@ -85,6 +85,7 @@ public class ProductDetailPageObject extends BasePage {
 	public void clickToCloseUpdateButton() {
 		waitForElementClickable(driver, ProductDetailPageUI.CLOSE_UPDATE_BUTTON);
 		clickToElement(driver, ProductDetailPageUI.CLOSE_UPDATE_BUTTON);
+		waitForElementInvisible(driver, ProductDetailPageUI.CLOSE_UPDATE_BUTTON);
 	}
 
 	public void waitForNotificationBarDisappeared() {
