@@ -119,6 +119,7 @@ public class Suite_08_Order extends BaseTest {
 
 	@Test
 	public void TC_06_Order_Payment_Method_Card() {
+		//init TCs
 	}
 
 	@Test

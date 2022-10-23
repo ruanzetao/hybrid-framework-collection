@@ -13,7 +13,7 @@ public class ShoppingCartPageUI {
 	public static final String ADDRESS1_TEXTBOX = "xpath=//input[@id='BillingNewAddress_Address1']";
 	public static final String ZIP_POSTAL_TEXTBOX = "xpath=//input[@id='BillingNewAddress_ZipPostalCode']";
 	public static final String PHONE_NUMBER_TEXTBOX = "xpath=//input[@id='BillingNewAddress_PhoneNumber']";
-	public static final String GIFT_WRAPPING_DROPDOWN = "xpath=//dd[@id='checkout_attribute_input_1']";
+	public static final String GIFT_WRAPPING_DROPDOWN = "xpath=//select[@id='checkout_attribute_1']";
 	public static final String COUNTRY_DROPDOWN = "xpath=//select[@id='BillingNewAddress_CountryId']";
 	public static final String STATE_PROVINCE_DROPDOWN = "xpath=//select[@id='BillingNewAddress_StateProvinceId']";
 	public static final String TERM_AND_CONDITION_CHECKBOX = "xpath=//input[@id='termsofservice']";
