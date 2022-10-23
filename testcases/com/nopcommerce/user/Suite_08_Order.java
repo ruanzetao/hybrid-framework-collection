@@ -106,15 +106,15 @@ public class Suite_08_Order extends BaseTest {
 
 	@Test
 	public void TC_05_Order_Payment_Method_Cheque() {
-		shoppingCartPage.selectGiftWrappingDropdown("No");
-		shoppingCartPage.checkToAgreeTermCheckbox();
-		shoppingCartPage.clickToCheckoutButton();
-		shoppingCartPage.selectCountryDropdown("Viet Nam");
-		shoppingCartPage.selectStateProvinceDropdown("Other (Non US)");
-		shoppingCartPage.inputToCityTextbox("City");
-		shoppingCartPage.inputToAddress1Textbox("Address1");
-		shoppingCartPage.inputToZipPostalCodeTextbox("550000");
-		shoppingCartPage.inputToPhoneNumberTextbox("0932658888");
+//		shoppingCartPage.selectGiftWrappingDropdown("No");
+//		shoppingCartPage.checkToAgreeTermCheckbox();
+//		shoppingCartPage.clickToCheckoutButton();
+//		shoppingCartPage.selectCountryDropdown("Viet Nam");
+//		shoppingCartPage.selectStateProvinceDropdown("Other (Non US)");
+//		shoppingCartPage.inputToCityTextbox("City");
+//		shoppingCartPage.inputToAddress1Textbox("Address1");
+//		shoppingCartPage.inputToZipPostalCodeTextbox("550000");
+//		shoppingCartPage.inputToPhoneNumberTextbox("0932658888");
 	}
 
 	@Test

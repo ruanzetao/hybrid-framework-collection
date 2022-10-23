@@ -36,6 +36,7 @@ public class ShoppingCartPageObject extends BasePage {
 	public void clickToUpdateShoppingCartButton() {
 		waitForElementClickable(driver, ShoppingCartPageUI.UPDATE_BUTTON);
 		clickToElement(driver, ShoppingCartPageUI.UPDATE_BUTTON);
+		sleepInSecond(3);
 	}
 
 	public void selectGiftWrappingDropdown(String response) {
