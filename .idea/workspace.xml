@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TC Payment method Card">
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TC Payment method Cheque">
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/admin/DashboardAdminPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/admin/LoginAdminPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/admin/ProductsCatalogAdminPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/admin/TemplatePageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/admin/BasePageAdminUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/admin/DashboardAdminPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/admin/LoginAdminPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/admin/TemplatePageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/runNCTest_Admin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/admin/Suite_01_Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ShoppingCartPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ShoppingCartPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/AddressesPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/AddressesPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ChangePasswordPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/ChangePasswordPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ComputersPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/ComputersPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/HomePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/HomePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/LoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/LoginPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/MyAccountPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/MyAccountPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/PageGeneratorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ProductByTypePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/ProductByTypePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ProductDetailPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/ProductDetailPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ProductReviewsPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/ProductReviewsPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/RegisterPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/RegisterPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/SearchPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/SearchPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/ShoppingCartPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/ShoppingCartPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/TemplatePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/TemplatePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/AddressesPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/AddressesPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/BasePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/BasePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ChangePasswordPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/ChangePasswordPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/HomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/HomePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/LoginPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/LoginPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/MyAccountPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/MyAccountPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ProductByTypePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/ProductByTypePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ProductDetailPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/ProductDetailPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ProductReviewsPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/ProductReviewsPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/RegisterPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/RegisterPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/SearchPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/SearchPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/ShoppingCartPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/ShoppingCartPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/TemplatePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/user/TemplatePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account_Faker.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_01_Register_Account_Faker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_02_Login_Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_02_Login_Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_03_My_Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_03_My_Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_04_Register_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_04_Register_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_05_Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_05_Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_06_Sort_Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_06_Sort_Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_07_Wishlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_07_Wishlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_08_Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_08_Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +75,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/HomePageObject.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/LoginPageObject.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/MyAccountPageObject.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/PageGeneratorManager.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/RegisterPageObject.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/HomePageObject.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/LoginPageObject.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/MyAccountPageObject.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/PageGeneratorManager.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/RegisterPageObject.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/resources/runNCTest.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/testcases/com/nopcommerce/user/Suite_00_Check_Environment.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -68,13 +115,24 @@
       <recent name="D:\eclipse-java\hybrid-framework-collection\libJavaFaker" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pageUIs.nopcommerce.admin" />
+      <recent name="pageObjects.nopcommerce.admin" />
+      <recent name="com.nopcommerce.admin" />
       <recent name="pageUIs.nopcommerce" />
       <recent name="pageObjects.nopcommerce" />
-      <recent name="com.nopcommerce.user" />
-      <recent name="commons" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Cart_Payment.xml">
+  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Admin.xml">
+    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Admin.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-collection" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Admin.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Cart_Payment.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Cart_Payment.xml" />
@@ -85,9 +143,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Search_Function.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Search_Function.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Register_Login.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -115,30 +173,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Suite_05_Search" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="hybrid-framework-collection" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nopcommerce.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.nopcommerce.user" />
-      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.user.Suite_05_Search" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Admin.xml" />
+        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Cart_Payment.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Wishlist.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Sort_Paging.xml" />
-        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Search_Function.xml" />
-        <item itemvalue="TestNG.Suite_05_Search" />
       </list>
     </recent_temporary>
   </component>
@@ -389,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666493305424</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Framework: update TC Payment method Cheque">
+      <created>1666510190648</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1666510190648</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -428,6 +476,7 @@
     <MESSAGE value="Framework: update TC 02 for Add to Cart function" />
     <MESSAGE value="Framework: update TC Payment and Order" />
     <MESSAGE value="Framework: update TC Payment method Card" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TC Payment method Card" />
+    <MESSAGE value="Framework: update TC Payment method Cheque" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TC Payment method Cheque" />
   </component>
 </project>

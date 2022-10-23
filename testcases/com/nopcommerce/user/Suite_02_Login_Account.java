@@ -6,10 +6,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.LoginPageObject;
-import pageObjects.nopcommerce.PageGeneratorManager;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.nopcommerce.user.HomePageObject;
+import pageObjects.nopcommerce.user.LoginPageObject;
+import pageObjects.nopcommerce.user.PageGeneratorManager;
+import pageObjects.nopcommerce.user.RegisterPageObject;
 
 public class Suite_02_Login_Account extends BaseTest {
 

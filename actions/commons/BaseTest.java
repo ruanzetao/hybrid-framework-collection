@@ -60,20 +60,21 @@ public class BaseTest {
 	}
 
 	protected WebDriver getBrowserDriver(String browserName, String appUrl) {
-		if (browserName.equals("firefox")) {
+		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
+		if (browser == BROWSER.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + "\\browserLogs\\FirefoxLog.log");
 			driver = new FirefoxDriver();
-		} else if (browserName.equals("chrome")) {
+		} else if (browser == BROWSER.CHROME) {
 			WebDriverManager.chromedriver().setup();
 			System.setProperty("webdriver.chrome.args", "--disable-logging");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			driver = new ChromeDriver();
-		} else if (browserName.equals("ie")) {
+		} else if (browser == BROWSER.IE) {
 			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
-		} else if (browserName.equals("cheadless")) {
+		} else if (browser == BROWSER.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headleass");
@@ -305,19 +306,20 @@ public class BaseTest {
 	public static long getRandomNumberByDateTime() {
 		return Calendar.getInstance().getTimeInMillis() % 100000;
 	}
-	public void deleteAllFilesInFolder(String folder){
+
+	public void deleteAllFilesInFolder(String folder) {
 		try {
-			String workingDir= GlobalConstants.PROJECT_PATH;
-			String pathAllureResult=workingDir+ File.separator +folder;
-			File file=new File(pathAllureResult);
-			File[] listOfFiles=file.listFiles();
-			for (int i=0;i<listOfFiles.length;i++){
-				if(listOfFiles[i].isFile()){
+			String workingDir = GlobalConstants.PROJECT_PATH;
+			String pathAllureResult = workingDir + File.separator + folder;
+			File file = new File(pathAllureResult);
+			File[] listOfFiles = file.listFiles();
+			for (int i = 0; i < listOfFiles.length; i++) {
+				if (listOfFiles[i].isFile()) {
 					System.out.println(listOfFiles[i].getName());
 					new File(listOfFiles[i].toString()).delete();
 				}
 			}
-		}catch (Exception e){
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 	}

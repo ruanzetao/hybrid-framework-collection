@@ -4,9 +4,9 @@ import commons.BaseTest;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.PageGeneratorManager;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.nopcommerce.user.HomePageObject;
+import pageObjects.nopcommerce.user.PageGeneratorManager;
+import pageObjects.nopcommerce.user.RegisterPageObject;
 
 @Epic("Regression test")
 @Feature("Register Account")
@@ -19,13 +19,15 @@ public class Suite_01_Register_Account extends BaseTest {
 	String lastName = "XSang";
 	String validEmail = "selenium" + generateFakeNumber() + "@mailinator.com";
 	String validPassword = "Abc@123";
+
 	@BeforeSuite
-	public void deleteAllFilesInAllureFolder(){
-		String folder="allure-results";
+	public void deleteAllFilesInAllureFolder() {
+		String folder = "allure-results";
 		System.out.println("----Start deleting Files in Allure Report----");
 		deleteAllFilesInFolder(folder);
 		System.out.println("----End deleting Files in Allure Report----");
 	}
+
 	@Parameters("browserName")
 	@BeforeClass
 	public void beforeClass(String browserName) {
@@ -49,6 +51,7 @@ public class Suite_01_Register_Account extends BaseTest {
 		Assert.assertEquals(registerPage.getPasswordErrorMessage(), "Password is required.");
 		Assert.assertEquals(registerPage.getConfirmPasswordErrorMessage(), "Password is required.");
 	}
+
 	@Description("Register Account with invalid Email")
 	@Severity(SeverityLevel.NORMAL)
 	@Test
@@ -62,13 +65,14 @@ public class Suite_01_Register_Account extends BaseTest {
 		registerPage.inputToLastNameTextbox("XSang");
 		//Missing @ at email
 		String invalidEmail = "seleniumonline" + generateFakeNumber() + "mailinator.com";
-		log.info("Step: Input invalid Email: "+invalidEmail);
+		log.info("Step: Input invalid Email: " + invalidEmail);
 		registerPage.inputToEmailTextbox(invalidEmail);
 		registerPage.inputToPasswordTextbox("Abc@123");
 		registerPage.inputToConfirmPasswordTextbox("Abc@123");
 		log.info("Step: Assert the results");
 		Assert.assertEquals(registerPage.getEmailErrorMessage(), "Wrong email");
 	}
+
 	@Description("Register Account with valid Email")
 	@Severity(SeverityLevel.NORMAL)
 	@Test
@@ -80,7 +84,7 @@ public class Suite_01_Register_Account extends BaseTest {
 		log.info("Step: input to all required Fields");
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
-		log.info("Step: input valid Email address: "+validEmail);
+		log.info("Step: input valid Email address: " + validEmail);
 		registerPage.inputToEmailTextbox(validEmail);
 		registerPage.inputToPasswordTextbox(validPassword);
 		registerPage.inputToConfirmPasswordTextbox(validPassword);
@@ -109,6 +113,7 @@ public class Suite_01_Register_Account extends BaseTest {
 		log.info("Step: assert the Results");
 		Assert.assertEquals(registerPage.getExistingEmailErrorMessage(), "The specified email already exists");
 	}
+
 	@Description("Register with Password less than 6 chars")
 	@Severity(SeverityLevel.NORMAL)
 	@Test
@@ -128,6 +133,7 @@ public class Suite_01_Register_Account extends BaseTest {
 		registerPage.clickToRegisterButton();
 		Assert.assertEquals(registerPage.getPasswordErrorMessage(), "Password must meet the following rules:\nmust have at least 6 characters");
 	}
+
 	@Description("Register with invalid Confirm Password")
 	@Severity(SeverityLevel.NORMAL)
 	@Test

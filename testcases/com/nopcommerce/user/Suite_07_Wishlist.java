@@ -5,7 +5,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.nopcommerce.*;
+import pageObjects.nopcommerce.user.*;
 
 public class Suite_07_Wishlist extends BaseTest {
 
