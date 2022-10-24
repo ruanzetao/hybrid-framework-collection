@@ -15,11 +15,13 @@ public class DashboardAdminPageObject extends BasePage {
 	public void expandLevel1MenuByName(String level1Menu) {
 		waitForElementClickable(driver, DashboardAdminPageUI.DYNAMIC_LEVEL1_LEFT_PANEL_MENU, level1Menu);
 		clickToElement(driver, DashboardAdminPageUI.DYNAMIC_LEVEL1_LEFT_PANEL_MENU, level1Menu);
+		sleepInSecond(10);
 	}
 
 	public void openLevel2PageByName(String level2Menu) {
 		waitForElementClickable(driver, DashboardAdminPageUI.DYNAMIC_LEVEL2_LEFT_PANEL_MENU, level2Menu);
 		clickToElement(driver, DashboardAdminPageUI.DYNAMIC_LEVEL2_LEFT_PANEL_MENU, level2Menu);
+		sleepInSecond(10);
 	}
 
 }

@@ -26,6 +26,7 @@ public class LoginAdminPageObject extends BasePage {
 	public DashboardAdminPageObject clickToLoginButton() {
 		waitForElementClickable(driver, LoginAdminPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginAdminPageUI.LOGIN_BUTTON);
+		sleepInSecond(10);
 		return PageGeneratorManager.getDashboardAdminPage(driver);
 	}
 

@@ -39,8 +39,13 @@ public class Suite_01_Admin extends BaseTest {
 		log.info("Step: select Level2 Menu");
 		dashboardAdminPage.openLevel2PageByName("Products");
 		productsCatalogAdminPage = PageGeneratorManager.getProductsCatalogAdminPage(driver);
-		log.info("Step: open Level2 Menu success.");
 		//update something
+		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
+		productsCatalogAdminPage.inputToProductNameTextbox(productName);
+		log.info("Step: click to Search button");
+		productsCatalogAdminPage.clickToSearchButton();
+		log.info("Step: verify the Result");
+		verifyTrue(productsCatalogAdminPage.isReturnedProductsContainKeyword(productName));
 	}
 
 	@Test
