@@ -40,6 +40,7 @@ public class Suite_01_Admin extends BaseTest {
 		dashboardAdminPage.openLevel2PageByName("Products");
 		productsCatalogAdminPage = PageGeneratorManager.getProductsCatalogAdminPage(driver);
 		log.info("Step: open Level2 Menu success.");
+		//update something
 	}
 
 	@Test
