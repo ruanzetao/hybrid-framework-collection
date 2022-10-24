@@ -24,4 +24,10 @@ public class DashboardAdminPageObject extends BasePage {
 		sleepInSecond(10);
 	}
 
+	public void goToCustomersLevel2Page() {
+		waitForElementClickable(driver, DashboardAdminPageUI.CUSTOMERS_LEVEL2_LEFT_PANEL_MENU);
+		clickToElement(driver, DashboardAdminPageUI.CUSTOMERS_LEVEL2_LEFT_PANEL_MENU);
+		sleepInSecond(10);
+	}
+
 }

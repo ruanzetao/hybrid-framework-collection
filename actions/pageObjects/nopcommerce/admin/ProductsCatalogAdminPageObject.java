@@ -44,4 +44,45 @@ public class ProductsCatalogAdminPageObject extends BasePage {
 		return checkTrue;
 	}
 
+	public void selectCategoryDropdown(String category) {
+		waitForElementClickable(driver, ProductsCatalogPageUI.CATEGORY_DROPDOWN);
+		selectItemDefaultDropdown(driver, ProductsCatalogPageUI.CATEGORY_DROPDOWN, category);
+	}
+
+	public void uncheckSubcategories() {
+		waitForElementClickable(driver, ProductsCatalogPageUI.SUBCATEGOGY_CHECKBOX);
+		uncheckDefaultCheckboxRadio(driver, ProductsCatalogPageUI.SUBCATEGOGY_CHECKBOX);
+	}
+
+	public String getReturnedMessage() {
+		waitForElementVisible(driver, ProductsCatalogPageUI.RETURNED_MESSAGE);
+		return getWebElement(driver, ProductsCatalogPageUI.RETURNED_MESSAGE).getText();
+	}
+
+	public void checkSubcategories() {
+		waitForElementClickable(driver, ProductsCatalogPageUI.SUBCATEGOGY_CHECKBOX);
+		checkDefaultCheckboxRadio(driver, ProductsCatalogPageUI.SUBCATEGOGY_CHECKBOX);
+	}
+
+	public void selectManufacturerDropdown(String manufacturer) {
+		waitForElementClickable(driver, ProductsCatalogPageUI.MANUFACTURER_DROPDOWN);
+		selectItemDefaultDropdown(driver, ProductsCatalogPageUI.MANUFACTURER_DROPDOWN, manufacturer);
+	}
+
+	public void inputToGoProductSKUTextbox(String productSKU) {
+		waitForElementVisible(driver, ProductsCatalogPageUI.PRODUCT_SKU_TEXTBOX);
+		sendKeyToElement(driver, ProductsCatalogPageUI.PRODUCT_SKU_TEXTBOX, productSKU);
+	}
+
+	public void clickToGoButton() {
+		waitForElementClickable(driver, ProductsCatalogPageUI.GO_SKU_BUTTON);
+		clickToElement(driver, ProductsCatalogPageUI.GO_SKU_BUTTON);
+		sleepInSecond(10);
+	}
+
+	public String getProductNameAtSKUPage() {
+		waitForElementVisible(driver, ProductsCatalogPageUI.PRODUCT_NAME_TEXTBOX_AT_SKU_PAGE);
+		return getWebElement(driver, ProductsCatalogPageUI.PRODUCT_NAME_TEXTBOX_AT_SKU_PAGE).getAttribute("value");
+	}
+
 }

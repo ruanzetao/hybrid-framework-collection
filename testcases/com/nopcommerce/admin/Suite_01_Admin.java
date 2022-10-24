@@ -50,32 +50,53 @@ public class Suite_01_Admin extends BaseTest {
 
 	@Test
 	public void TC_02_Admin_Search_Product_Name_Parent_Category_Unchecked() {
-		driver.getTitle();
+		productsCatalogAdminPage.selectCategoryDropdown("Computers");
+		productsCatalogAdminPage.uncheckSubcategories();
+		productsCatalogAdminPage.clickToSearchButton();
+		verifyEquals(productsCatalogAdminPage.getReturnedMessage(), "No data available in table");
 	}
 
 	@Test
 	public void TC_03_Admin_Search_Product_Name_Parent_Category_Checked() {
-		driver.getTitle();
+		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
+		productsCatalogAdminPage.selectCategoryDropdown("Computers");
+		productsCatalogAdminPage.checkSubcategories();
+		productsCatalogAdminPage.clickToSearchButton();
+		verifyTrue(productsCatalogAdminPage.isReturnedProductsContainKeyword(productName));
 	}
 
 	@Test
 	public void TC_04_Admin_Search_Product_Name_Child_Category() {
-		driver.getTitle();
+		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
+		productsCatalogAdminPage.selectCategoryDropdown("Computers >> Desktops");
+		productsCatalogAdminPage.uncheckSubcategories();
+		productsCatalogAdminPage.clickToSearchButton();
+		verifyTrue(productsCatalogAdminPage.isReturnedProductsContainKeyword(productName));
 	}
 
 	@Test
 	public void TC_05_Admin_Search_Product_Name_Manufacturer() {
-		driver.getTitle();
+		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
+		productsCatalogAdminPage.selectCategoryDropdown("All");
+		productsCatalogAdminPage.uncheckSubcategories();
+		productsCatalogAdminPage.selectManufacturerDropdown("Apple");
+		productsCatalogAdminPage.clickToSearchButton();
+		verifyEquals(productsCatalogAdminPage.getReturnedMessage(), "No data available in table");
 	}
 
 	@Test
 	public void TC_06_Admin_Go_To_ProductSKU() {
-		driver.getTitle();
+		productsCatalogAdminPage.inputToGoProductSKUTextbox("LE_IC_600");
+		productsCatalogAdminPage.clickToGoButton();
+		verifyEquals(productsCatalogAdminPage.getProductNameAtSKUPage(), "Lenovo IdeaCentre 600 All-in-One PC");
 	}
 
 	@Test
 	public void TC_07_Admin_Create_New_Customer() {
-		driver.getTitle();
+		log.info("Step: expand Level1 Menu");
+		dashboardAdminPage.expandLevel1MenuByName("Customers");
+		log.info("Step: select Level2 Menu");
+		dashboardAdminPage.goToCustomersLevel2Page();
 	}
 
 	@Test
