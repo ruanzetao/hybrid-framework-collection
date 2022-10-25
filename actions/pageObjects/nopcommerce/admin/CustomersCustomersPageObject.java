@@ -2,7 +2,10 @@ package pageObjects.nopcommerce.admin;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pageUIs.nopcommerce.admin.CustomersCustomersPageUI;
+
+import java.util.List;
 
 public class CustomersCustomersPageObject extends BasePage {
 
@@ -70,6 +73,61 @@ public class CustomersCustomersPageObject extends BasePage {
 	public void inputToDateOfBirthDatePicker(String date) {
 		waitForElementVisible(driver, CustomersCustomersPageUI.DATE_OF_BIRTH_PICKER_ADD_NEW);
 		sendKeyToElement(driver, CustomersCustomersPageUI.DATE_OF_BIRTH_PICKER_ADD_NEW, date);
+	}
+
+	public void inputToEmailSearchTextbox(String email) {
+		waitForElementVisible(driver, CustomersCustomersPageUI.EMAIL_SEARCH_TEXTBOX);
+		sendKeyToElement(driver, CustomersCustomersPageUI.EMAIL_SEARCH_TEXTBOX, email);
+	}
+
+	public void clickToSearchButton() {
+		waitForElementClickable(driver, CustomersCustomersPageUI.SEARCH_BUTTON);
+		clickToElement(driver, CustomersCustomersPageUI.SEARCH_BUTTON);
+	}
+
+	public boolean isReturnedCustomersContainsKeyword(String email) {
+		List<WebElement> returnedCustomers = getListWebElement(driver, CustomersCustomersPageUI.RETURNED_CUSTOMERS_BY_EMAIL);
+		for (WebElement element : returnedCustomers) {
+			if (element.getText().contains(email)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public void inputToFirstNameSearchTextbox(String firstName) {
+		waitForElementVisible(driver, CustomersCustomersPageUI.FIRST_NAME_TEXTBOX);
+		sendKeyToElement(driver, CustomersCustomersPageUI.FIRST_NAME_TEXTBOX, firstName);
+	}
+
+	public void inputToLastNameSearchTextbox(String lastName) {
+		waitForElementVisible(driver, CustomersCustomersPageUI.LAST_NAME_TEXTBOX);
+		sendKeyToElement(driver, CustomersCustomersPageUI.LAST_NAME_TEXTBOX, lastName);
+	}
+
+	public boolean isReturnedCustomersContainsName(String combinedName) {
+		List<WebElement> returnedCustomers = getListWebElement(driver, CustomersCustomersPageUI.RETURNED_CUSTOMERS_BY_NAME);
+		for (WebElement element : returnedCustomers) {
+			if (element.getText().contains(combinedName)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public void inputToCompanySearchTextbox(String companyName) {
+		waitForElementVisible(driver, CustomersCustomersPageUI.COMPANY_NAME_TEXTBOX);
+		sendKeyToElement(driver, CustomersCustomersPageUI.COMPANY_NAME_TEXTBOX, companyName);
+	}
+
+	public boolean isReturnedCustomersContainsCompany(String companyName) {
+		List<WebElement> returnedCustomers = getListWebElement(driver, CustomersCustomersPageUI.RETURNED_CUSTOMERS_BY_COMPANY);
+		for (WebElement element : returnedCustomers) {
+			if (element.getText().contains(companyName)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }

@@ -118,17 +118,36 @@ public class Suite_01_Admin extends BaseTest {
 
 	@Test
 	public void TC_08_Admin_Search_Customer_Email() {
-		driver.getTitle();
+		log.info("Step: expand Level1 Menu");
+		dashboardAdminPage.expandLevel1MenuByName("Customers");
+		log.info("Step: select Level2 Menu");
+		customersCustomersPage = dashboardAdminPage.goToCustomersLevel2Page();
+		customersCustomersPage.inputToEmailSearchTextbox(email);
+		customersCustomersPage.clickToSearchButton();
+		verifyTrue(customersCustomersPage.isReturnedCustomersContainsKeyword(email));
 	}
 
 	@Test
 	public void TC_09_Admin_Search_Customer_Firstname_Lastname() {
-		driver.getTitle();
+//		log.info("Step: expand Level1 Menu");
+//		dashboardAdminPage.expandLevel1MenuByName("Customers");
+//		log.info("Step: select Level2 Menu");
+//		customersCustomersPage = dashboardAdminPage.goToCustomersLevel2Page();
+		customersCustomersPage.inputToEmailSearchTextbox("");
+		customersCustomersPage.inputToFirstNameSearchTextbox("Nguyen");
+		customersCustomersPage.inputToLastNameSearchTextbox("XSang");
+		customersCustomersPage.clickToSearchButton();
+		verifyTrue(customersCustomersPage.isReturnedCustomersContainsName("Nguyen XSang"));
 	}
 
 	@Test
 	public void TC_10_Admin_Search_Customer_Company() {
-		driver.getTitle();
+		customersCustomersPage.inputToEmailSearchTextbox("");
+		customersCustomersPage.inputToFirstNameSearchTextbox("");
+		customersCustomersPage.inputToLastNameSearchTextbox("");
+		customersCustomersPage.inputToCompanySearchTextbox("companyName");
+		customersCustomersPage.clickToSearchButton();
+		verifyTrue(customersCustomersPage.isReturnedCustomersContainsCompany("companyName"));
 	}
 
 	@Test
