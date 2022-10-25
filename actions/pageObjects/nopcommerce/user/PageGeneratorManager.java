@@ -1,6 +1,7 @@
 package pageObjects.nopcommerce.user;
 
 import org.openqa.selenium.WebDriver;
+import pageObjects.nopcommerce.admin.CustomersCustomersPageObject;
 import pageObjects.nopcommerce.admin.DashboardAdminPageObject;
 import pageObjects.nopcommerce.admin.LoginAdminPageObject;
 import pageObjects.nopcommerce.admin.ProductsCatalogAdminPageObject;
@@ -65,6 +66,10 @@ public class PageGeneratorManager {
 
 	public static ProductsCatalogAdminPageObject getProductsCatalogAdminPage(WebDriver driver) {
 		return new ProductsCatalogAdminPageObject(driver);
+	}
+
+	public static CustomersCustomersPageObject getCustomersCustomersAdminPage(WebDriver driver) {
+		return new CustomersCustomersPageObject(driver);
 	}
 
 }

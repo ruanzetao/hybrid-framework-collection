@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TC01-07 for Admin page">
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TC07 for Admin page">
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/admin/CustomersCustomersPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/admin/CustomersCustomersPageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/admin/DashboardAdminPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/nopcommerce/admin/DashboardAdminPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/admin/DashboardAdminPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/admin/DashboardAdminPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/nopcommerce/user/PageGeneratorManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/admin/Suite_01_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/admin/Suite_01_Admin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -418,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666625148596</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Framework: update TC07 for Admin page">
+      <created>1666689192291</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1666689192291</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -433,7 +443,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Framework: fix bugs" />
     <MESSAGE value="Framework: init TCs" />
     <MESSAGE value="Framework: update TCs for My Account" />
     <MESSAGE value="Framework: init TCs for Search function" />
@@ -458,6 +467,7 @@
     <MESSAGE value="Framework: update TCs for Admin page" />
     <MESSAGE value="Framework: update TC01 for Admin page" />
     <MESSAGE value="Framework: update TC01-07 for Admin page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TC01-07 for Admin page" />
+    <MESSAGE value="Framework: update TC07 for Admin page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TC07 for Admin page" />
   </component>
 </project>

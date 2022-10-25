@@ -2,6 +2,7 @@ package pageObjects.nopcommerce.admin;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
+import pageObjects.nopcommerce.user.PageGeneratorManager;
 import pageUIs.nopcommerce.admin.DashboardAdminPageUI;
 
 public class DashboardAdminPageObject extends BasePage {
@@ -24,10 +25,11 @@ public class DashboardAdminPageObject extends BasePage {
 		sleepInSecond(10);
 	}
 
-	public void goToCustomersLevel2Page() {
+	public CustomersCustomersPageObject goToCustomersLevel2Page() {
 		waitForElementClickable(driver, DashboardAdminPageUI.CUSTOMERS_LEVEL2_LEFT_PANEL_MENU);
 		clickToElement(driver, DashboardAdminPageUI.CUSTOMERS_LEVEL2_LEFT_PANEL_MENU);
 		sleepInSecond(10);
+		return PageGeneratorManager.getCustomersCustomersAdminPage(driver);
 	}
 
 }

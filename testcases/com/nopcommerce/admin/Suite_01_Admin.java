@@ -6,6 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageObjects.nopcommerce.admin.CustomersCustomersPageObject;
 import pageObjects.nopcommerce.admin.DashboardAdminPageObject;
 import pageObjects.nopcommerce.admin.LoginAdminPageObject;
 import pageObjects.nopcommerce.admin.ProductsCatalogAdminPageObject;
@@ -16,6 +17,8 @@ public class Suite_01_Admin extends BaseTest {
 	private LoginAdminPageObject loginAdminPage;
 	private DashboardAdminPageObject dashboardAdminPage;
 	private ProductsCatalogAdminPageObject productsCatalogAdminPage;
+	private CustomersCustomersPageObject customersCustomersPage;
+	String email = getRandomEmail();
 
 	@Parameters("browserName")
 	@BeforeClass
@@ -96,8 +99,21 @@ public class Suite_01_Admin extends BaseTest {
 		log.info("Step: expand Level1 Menu");
 		dashboardAdminPage.expandLevel1MenuByName("Customers");
 		log.info("Step: select Level2 Menu");
-		dashboardAdminPage.goToCustomersLevel2Page();
-		//update TC07
+		customersCustomersPage = dashboardAdminPage.goToCustomersLevel2Page();
+		customersCustomersPage.clickToAddNewButton();
+		customersCustomersPage.expandCustomerInfoArea();
+		System.out.println("Email: " + email);
+		customersCustomersPage.inputToEmailTextbox(email);
+		customersCustomersPage.inputToPasswordTextbox("Abc@123");
+		customersCustomersPage.inputToFirstNameTextbox("Nguyen");
+		customersCustomersPage.inputToLastNameTextbox("XSang");
+		customersCustomersPage.checkToGenderRadio("Male");
+		customersCustomersPage.inputToDateOfBirthDatePicker("02/19/1996");
+		customersCustomersPage.inputToCompanyName("companyName");
+//		customersCustomersPage.inputToCustomerRoles("Guests");
+		customersCustomersPage.checkToActiveCheckbox();
+		customersCustomersPage.inputToAdminComment("adminComment");
+		customersCustomersPage.clickToSaveAndContinueEditButton();
 	}
 
 	@Test
