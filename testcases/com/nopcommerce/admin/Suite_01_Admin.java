@@ -32,71 +32,72 @@ public class Suite_01_Admin extends BaseTest {
 		dashboardAdminPage = loginAdminPage.clickToLoginButton();
 	}
 
-	@Test
-	public void TC_01_Admin_Search_Product_Name() {
-		log.info("Step: expand Level1 Menu");
-		dashboardAdminPage.expandLevel1MenuByName("Catalog");
-		log.info("Step: select Level2 Menu");
-		dashboardAdminPage.openLevel2PageByName("Products");
-		productsCatalogAdminPage = PageGeneratorManager.getProductsCatalogAdminPage(driver);
-		//update something
-		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
-		productsCatalogAdminPage.inputToProductNameTextbox(productName);
-		log.info("Step: click to Search button");
-		productsCatalogAdminPage.clickToSearchButton();
-		log.info("Step: verify the Result");
-		verifyTrue(productsCatalogAdminPage.isReturnedProductsContainKeyword(productName));
-	}
-
-	@Test
-	public void TC_02_Admin_Search_Product_Name_Parent_Category_Unchecked() {
-		productsCatalogAdminPage.selectCategoryDropdown("Computers");
-		productsCatalogAdminPage.uncheckSubcategories();
-		productsCatalogAdminPage.clickToSearchButton();
-		verifyEquals(productsCatalogAdminPage.getReturnedMessage(), "No data available in table");
-	}
-
-	@Test
-	public void TC_03_Admin_Search_Product_Name_Parent_Category_Checked() {
-		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
-		productsCatalogAdminPage.selectCategoryDropdown("Computers");
-		productsCatalogAdminPage.checkSubcategories();
-		productsCatalogAdminPage.clickToSearchButton();
-		verifyTrue(productsCatalogAdminPage.isReturnedProductsContainKeyword(productName));
-	}
-
-	@Test
-	public void TC_04_Admin_Search_Product_Name_Child_Category() {
-		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
-		productsCatalogAdminPage.selectCategoryDropdown("Computers >> Desktops");
-		productsCatalogAdminPage.uncheckSubcategories();
-		productsCatalogAdminPage.clickToSearchButton();
-		verifyTrue(productsCatalogAdminPage.isReturnedProductsContainKeyword(productName));
-	}
-
-	@Test
-	public void TC_05_Admin_Search_Product_Name_Manufacturer() {
-		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
-		productsCatalogAdminPage.selectCategoryDropdown("All");
-		productsCatalogAdminPage.uncheckSubcategories();
-		productsCatalogAdminPage.selectManufacturerDropdown("Apple");
-		productsCatalogAdminPage.clickToSearchButton();
-		verifyEquals(productsCatalogAdminPage.getReturnedMessage(), "No data available in table");
-	}
-
-	@Test
-	public void TC_06_Admin_Go_To_ProductSKU() {
-		productsCatalogAdminPage.inputToGoProductSKUTextbox("LE_IC_600");
-		productsCatalogAdminPage.clickToGoButton();
-		verifyEquals(productsCatalogAdminPage.getProductNameAtSKUPage(), "Lenovo IdeaCentre 600 All-in-One PC");
-	}
-
+	//	@Test
+//	public void TC_01_Admin_Search_Product_Name() {
+//		log.info("Step: expand Level1 Menu");
+//		dashboardAdminPage.expandLevel1MenuByName("Catalog");
+//		log.info("Step: select Level2 Menu");
+//		dashboardAdminPage.openLevel2PageByName("Products");
+//		productsCatalogAdminPage = PageGeneratorManager.getProductsCatalogAdminPage(driver);
+//		//update something
+//		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
+//		productsCatalogAdminPage.inputToProductNameTextbox(productName);
+//		log.info("Step: click to Search button");
+//		productsCatalogAdminPage.clickToSearchButton();
+//		log.info("Step: verify the Result");
+//		verifyTrue(productsCatalogAdminPage.isReturnedProductsContainKeyword(productName));
+//	}
+//
+//	@Test
+//	public void TC_02_Admin_Search_Product_Name_Parent_Category_Unchecked() {
+//		productsCatalogAdminPage.selectCategoryDropdown("Computers");
+//		productsCatalogAdminPage.uncheckSubcategories();
+//		productsCatalogAdminPage.clickToSearchButton();
+//		verifyEquals(productsCatalogAdminPage.getReturnedMessage(), "No data available in table");
+//	}
+//
+//	@Test
+//	public void TC_03_Admin_Search_Product_Name_Parent_Category_Checked() {
+//		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
+//		productsCatalogAdminPage.selectCategoryDropdown("Computers");
+//		productsCatalogAdminPage.checkSubcategories();
+//		productsCatalogAdminPage.clickToSearchButton();
+//		verifyTrue(productsCatalogAdminPage.isReturnedProductsContainKeyword(productName));
+//	}
+//
+//	@Test
+//	public void TC_04_Admin_Search_Product_Name_Child_Category() {
+//		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
+//		productsCatalogAdminPage.selectCategoryDropdown("Computers >> Desktops");
+//		productsCatalogAdminPage.uncheckSubcategories();
+//		productsCatalogAdminPage.clickToSearchButton();
+//		verifyTrue(productsCatalogAdminPage.isReturnedProductsContainKeyword(productName));
+//	}
+//
+//	@Test
+//	public void TC_05_Admin_Search_Product_Name_Manufacturer() {
+//		String productName = "Lenovo IdeaCentre 600 All-in-One PC";
+//		productsCatalogAdminPage.selectCategoryDropdown("All");
+//		productsCatalogAdminPage.uncheckSubcategories();
+//		productsCatalogAdminPage.selectManufacturerDropdown("Apple");
+//		productsCatalogAdminPage.clickToSearchButton();
+//		verifyEquals(productsCatalogAdminPage.getReturnedMessage(), "No data available in table");
+//	}
+//
+//	@Test
+//	public void TC_06_Admin_Go_To_ProductSKU() {
+//		productsCatalogAdminPage.inputToGoProductSKUTextbox("LE_IC_600");
+//		productsCatalogAdminPage.clickToGoButton();
+//		verifyEquals(productsCatalogAdminPage.getProductNameAtSKUPage(), "Lenovo IdeaCentre 600 All-in-One PC");
+//	}
+//
 	@Test
 	public void TC_07_Admin_Create_New_Customer() {
 		log.info("Step: expand Level1 Menu");
 		dashboardAdminPage.expandLevel1MenuByName("Customers");
 		log.info("Step: select Level2 Menu");
 		dashboardAdminPage.goToCustomersLevel2Page();
+		//update TC07
 	}
 
 	@Test
