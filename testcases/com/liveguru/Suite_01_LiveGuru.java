@@ -10,21 +10,25 @@ import pageObjects.liveguru.*;
 
 public class Suite_01_LiveGuru extends BaseTest {
 
-	private HomePagePageObject dashboardPage;
+	private HomePagePageObject homePage;
 	private MyAccountPageObject myAccountPage;
 	private CreateAnAccountPageObject createAnAccountPage;
 	private AccountDashboardPageObject accountDashboardPage;
 	private AccountInformationPageObject accountInformationPage;
+	private MobilePageObject mobilePage;
+	private MobileDetailPageObject mobileDetailPage;
 	String emailAddress, firstName, lastName, password;
+	String priceAtMobilePage;
+	String priceAtMobileDetailPage;
 
 	@Parameters("browserName")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		System.out.println("Browser name: " + browserName);
 		getBrowserDriver(browserName, GlobalConstants.LIVE_GURU_PORTAL_URL);
-		dashboardPage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getHomePage(driver);
 		sleepInSecond(10);
-		myAccountPage = dashboardPage.clickToMyAccountLiveGuru(driver);
+		myAccountPage = homePage.clickToMyAccountLiveGuru(driver);
 	}
 
 	@Test
@@ -51,14 +55,28 @@ public class Suite_01_LiveGuru extends BaseTest {
 		verifyEquals(accountInformationPage.getFirstNameValue(), firstName);
 		verifyEquals(accountInformationPage.getLastNameValue(), lastName);
 		verifyEquals(accountInformationPage.getEmailAddressValue(), emailAddress);
+		accountInformationPage.clickToAccountButton();
+		homePage = accountInformationPage.clickToLogoutMenu();
 	}
 
 	@Test
 	public void TC_03_Login_Success() {
+		//seleniumonline72158@mailinator.com
+		myAccountPage = homePage.clickToMyAccountLiveGuru(driver);
+		myAccountPage.inputToEmailAddressTextbox(emailAddress);
+		System.out.println("Email: " + emailAddress);
+		myAccountPage.inputToPasswordTextbox(password);
+		System.out.println("Password: " + password);
+		accountDashboardPage = myAccountPage.clickToLoginButton();
 	}
 
 	@Test
 	public void TC_04_Product_Cost_Equal() {
+		mobilePage = accountDashboardPage.clickToMobileMenu();
+		priceAtMobilePage = mobilePage.getPriceAtMobilePage("product");
+		mobileDetailPage = mobilePage.clickToProductNameHyperlink("product");
+		priceAtMobileDetailPage = mobileDetailPage.getPriceAtMobileDetailPage();
+		verifyTrue(mobileDetailPage.comparePrice(priceAtMobilePage, priceAtMobileDetailPage));
 	}
 
 	@Test

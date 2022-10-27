@@ -24,4 +24,12 @@ public class PageGeneratorManager {
 		return new AccountInformationPageObject(driver);
 	}
 
+	public static MobilePageObject getMobilePage(WebDriver driver) {
+		return new MobilePageObject(driver);
+	}
+
+	public static MobileDetailPageObject getMobileDetailPage(WebDriver driver) {
+		return new MobileDetailPageObject(driver);
+	}
+
 }

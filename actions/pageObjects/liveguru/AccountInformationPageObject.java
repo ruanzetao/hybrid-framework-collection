@@ -27,4 +27,16 @@ public class AccountInformationPageObject extends BasePage {
 		return getWebElement(driver, AccountInformationPageUI.EMAIL_ADDRESS_TEXTBOX).getAttribute("value");
 	}
 
+	public void clickToAccountButton() {
+		waitForElementClickable(driver, AccountInformationPageUI.ACCOUNT_BUTTON);
+		clickToElement(driver, AccountInformationPageUI.ACCOUNT_BUTTON);
+	}
+
+	public HomePagePageObject clickToLogoutMenu() {
+		waitForElementClickable(driver, AccountInformationPageUI.LOGOUT_MENU);
+		clickToElement(driver, AccountInformationPageUI.LOGOUT_MENU);
+		sleepInSecond(10);
+		return PageGeneratorManager.getHomePage(driver);
+	}
+
 }

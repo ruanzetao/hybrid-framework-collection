@@ -18,4 +18,10 @@ public class AccountDashboardPageObject extends BasePage {
 		return PageGeneratorManager.getAccountInformationPage(driver);
 	}
 
+	public MobilePageObject clickToMobileMenu() {
+		waitForElementVisible(driver, AccountDashboardPageUI.MOBILE_MENU);
+		clickToElement(driver, AccountDashboardPageUI.MOBILE_MENU);
+		return PageGeneratorManager.getMobilePage(driver);
+	}
+
 }
