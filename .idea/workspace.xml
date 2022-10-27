@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: complete TC07-10 for Admin page">
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/DashboardPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/LoginPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/TemplatePageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/DashboardPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/LoginPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/TemplatePageUI.java" afterDir="false" />
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: init pageObject and pageUI for LiveGuru">
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/AccountDashboardPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/CreateAnAccountPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/HomePagePageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/MyAccountPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/PageGeneratorManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/AccountDashboardPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/CreateAnAccountPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/HomePagePageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/runNCTest_LiveGuru.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/liveguru/Suite_00_Check_Environment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/liveguru/Suite_01_LiveGuru.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/liveguru/DashboardPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/AccountInformationPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/DashboardPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/AccountInformationPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/log4j.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,18 +61,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/eclipse-java/hybrid-framework-collection/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/eclipse-java/hybrid-framework-collection/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\eclipse-java\hybrid-framework-collection\resources" />
@@ -74,12 +84,12 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pageUIs.liveguru" />
       <recent name="pageObjects.liveguru" />
+      <recent name="com.liveguru" />
       <recent name="pageUIs.nopcommerce.admin" />
       <recent name="pageObjects.nopcommerce.admin" />
-      <recent name="com.nopcommerce.admin" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Admin.xml">
+  <component name="RunManager" selected="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_LiveGuru.xml">
     <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Admin.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Admin.xml" />
@@ -100,9 +110,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_LiveGuru.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Register_Login.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_LiveGuru.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -110,9 +120,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Sort_Paging.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-collection" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Sort_Paging.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runNCTest_Register_Login.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -132,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_LiveGuru.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Admin.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Register_Login.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Cart_Payment.xml" />
         <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Wishlist.xml" />
-        <item itemvalue="TestNG.D:/eclipse-java/hybrid-framework-collection/resources/runNCTest_Sort_Paging.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -443,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666706108013</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Framework: init pageObject and pageUI for LiveGuru">
+      <created>1666793022038</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1666793022038</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,7 +475,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Framework: init TCs for Search function" />
     <MESSAGE value="Framework: update TCs for Search function" />
     <MESSAGE value="Framework: update TCs 05 for Search function" />
     <MESSAGE value="Framework: update all TCs for Search function" />
@@ -483,6 +499,11 @@
     <MESSAGE value="Framework: update TC07 for Admin page" />
     <MESSAGE value="Framework: complete TC07 for Admin page" />
     <MESSAGE value="Framework: complete TC07-10 for Admin page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: complete TC07-10 for Admin page" />
+    <MESSAGE value="Framework: init pageObject and pageUI for LiveGuru" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: init pageObject and pageUI for LiveGuru" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

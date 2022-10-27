@@ -324,4 +324,12 @@ public class BaseTest {
 		}
 	}
 
+	public void sleepInSecond(long timeInSecond) {
+		try {
+			Thread.sleep(timeInSecond * 100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
 }
