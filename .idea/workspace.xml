@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs for LiveGuru">
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/MobileDetailPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/MobilePageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/MobileDetailPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/MobilePageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/MyAccountPageUI.java" afterDir="false" />
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs for ComparePrice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/liveguru/AccountDashboardPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/AccountDashboardPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/liveguru/AccountInformationPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/AccountInformationPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/liveguru/MyAccountPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/MyAccountPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/liveguru/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/PageGeneratorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/AccountDashboardPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/AccountDashboardPageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/AccountInformationPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/AccountInformationPageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/liveguru/Suite_01_LiveGuru.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/liveguru/Suite_01_LiveGuru.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -463,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666837737593</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Framework: update TCs for ComparePrice">
+      <created>1666882157967</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1666882157967</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -478,7 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Framework: update TCs 05 for Search function" />
     <MESSAGE value="Framework: update all TCs for Search function" />
     <MESSAGE value="Framework: int TCs for Sort and Paging" />
     <MESSAGE value="Framework: init TCs for Sort and Paging" />
@@ -503,7 +498,8 @@
     <MESSAGE value="Framework: complete TC07-10 for Admin page" />
     <MESSAGE value="Framework: init pageObject and pageUI for LiveGuru" />
     <MESSAGE value="Framework: update TCs for LiveGuru" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TCs for LiveGuru" />
+    <MESSAGE value="Framework: update TCs for ComparePrice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TCs for ComparePrice" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

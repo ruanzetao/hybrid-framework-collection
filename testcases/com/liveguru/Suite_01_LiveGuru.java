@@ -81,6 +81,7 @@ public class Suite_01_LiveGuru extends BaseTest {
 
 	@Test
 	public void TC_05_Discount_Coupon_Work_Correctly() {
+		verifyTrue(mobileDetailPage.comparePrice(priceAtMobilePage, priceAtMobileDetailPage));
 	}
 
 	@Test
