@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: update TCs for ComparePrice">
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: init TCs for Discount Coupon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/com/liveguru/Suite_01_LiveGuru.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/liveguru/Suite_01_LiveGuru.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -459,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666882157967</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Framework: init TCs for Discount Coupon">
+      <created>1666947607374</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1666947607374</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -474,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Framework: update all TCs for Search function" />
     <MESSAGE value="Framework: int TCs for Sort and Paging" />
     <MESSAGE value="Framework: init TCs for Sort and Paging" />
     <MESSAGE value="Framework: update sorting TCs" />
@@ -499,7 +505,8 @@
     <MESSAGE value="Framework: init pageObject and pageUI for LiveGuru" />
     <MESSAGE value="Framework: update TCs for LiveGuru" />
     <MESSAGE value="Framework: update TCs for ComparePrice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: update TCs for ComparePrice" />
+    <MESSAGE value="Framework: init TCs for Discount Coupon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: init TCs for Discount Coupon" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

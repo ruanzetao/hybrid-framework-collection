@@ -20,7 +20,7 @@ public class GlobalConstants {
 	public static final String EXTENT_PATH = PROJECT_PATH + File.separator + "ReportNGImages" + File.separator;
 	// DB, Account, IP, User, Pass, Port
 	public static final long SHORT_TIMEOUT = 5;
-	public static final long LONG_TIMEOUT = 5;
+	public static final long LONG_TIMEOUT = 30;
 	public static final long RETRY_TEST_FAIL = 3;
 
 }
