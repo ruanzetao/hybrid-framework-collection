@@ -74,8 +74,8 @@ public class Suite_01_LiveGuru extends BaseTest {
 	@Test
 	public void TC_04_Product_Cost_Equal() {
 		mobilePage = accountDashboardPage.clickToMobileMenu();
-		priceAtMobilePage = mobilePage.getPriceAtMobilePage("product");
-		mobileDetailPage = mobilePage.clickToProductNameHyperlink("product");
+		priceAtMobilePage = mobilePage.getPriceAtMobilePage("Sony Xperia");
+		mobileDetailPage = mobilePage.clickToProductNameHyperlink("Sony Xperia");
 		priceAtMobileDetailPage = mobileDetailPage.getPriceAtMobileDetailPage();
 		verifyTrue(mobileDetailPage.comparePrice(priceAtMobilePage, priceAtMobileDetailPage));
 	}
@@ -92,6 +92,13 @@ public class Suite_01_LiveGuru extends BaseTest {
 
 	@Test
 	public void TC_06_Unable_To_Add_Over_500_Product() {
+		mobilePage = shoppingCartPage.clickToMobileMenu();
+		mobileDetailPage = mobilePage.clickToProductNameHyperlink("Sony Xperia");
+		shoppingCartPage = mobileDetailPage.clickToAddToCartButton();
+		shoppingCartPage.inputToQuantityTextbox("501");
+		shoppingCartPage.clickToUpdateButton();
+		verifyEquals(shoppingCartPage.getErrorMessage(), "Some of the products cannot be ordered in requested quantity.");
+		verifyEquals(shoppingCartPage.getItemErrorMessage(), "* The maximum quantity allowed for purchase is 500.");
 	}
 
 	@Test

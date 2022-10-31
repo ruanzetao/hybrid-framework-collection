@@ -13,13 +13,13 @@ public class MobilePageObject extends BasePage {
 	}
 
 	public String getPriceAtMobilePage(String product) {
-		waitForElementVisible(driver, MobilePageUI.PRODUCT_PRICE);
-		return getWebElement(driver, MobilePageUI.PRODUCT_PRICE).getText();
+		waitForElementVisible(driver, MobilePageUI.PRODUCT_PRICE, product);
+		return getWebElement(driver, MobilePageUI.PRODUCT_PRICE, product).getText();
 	}
 
 	public MobileDetailPageObject clickToProductNameHyperlink(String product) {
-		waitForElementClickable(driver, MobilePageUI.PRODUCT_NAME);
-		clickToElement(driver, MobilePageUI.PRODUCT_NAME);
+		waitForElementClickable(driver, MobilePageUI.PRODUCT_NAME, product);
+		clickToElement(driver, MobilePageUI.PRODUCT_NAME, product);
 		return PageGeneratorManager.getMobileDetailPage(driver);
 	}
 
