@@ -103,6 +103,7 @@ public class Suite_01_LiveGuru extends BaseTest {
 
 	@Test
 	public void TC_07_Able_To_Compare_Two_Items() {
+		//Update something
 	}
 
 	@Test

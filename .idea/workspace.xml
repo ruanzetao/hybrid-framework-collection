@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: apply TCs for Discount Coupon">
+    <list default="true" id="b5ec0f34-1e75-4086-93b6-609653ef473f" name="Changes" comment="Framework: add TCs for Add Over 500 items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/liveguru/MobilePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/MobilePageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/liveguru/ShoppingCartPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/liveguru/ShoppingCartPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/MobilePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/MobilePageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/ShoppingCartPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/liveguru/ShoppingCartPageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/liveguru/Suite_01_LiveGuru.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/liveguru/Suite_01_LiveGuru.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,13 +143,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665068722283</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Framework: init traditional hybrid framework collection">
-      <created>1665069866218</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1665069866218</updated>
     </task>
     <task id="LOCAL-00002" summary="Framework: add libraries">
       <created>1665071674672</created>
@@ -492,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667197683442</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Framework: add TCs for Add Over 500 items">
+      <created>1667199381637</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1667199381638</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Framework: update sorting and paging TCs" />
     <MESSAGE value="Framework: update all TCs for sorting and paging" />
     <MESSAGE value="Framework: init TCs for Wishlist" />
     <MESSAGE value="Framework: update TCs for Wishlist" />
@@ -532,7 +526,8 @@
     <MESSAGE value="Framework: update Configs" />
     <MESSAGE value="Framework: update TCs for Discount Coupon" />
     <MESSAGE value="Framework: apply TCs for Discount Coupon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework: apply TCs for Discount Coupon" />
+    <MESSAGE value="Framework: add TCs for Add Over 500 items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Framework: add TCs for Add Over 500 items" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
