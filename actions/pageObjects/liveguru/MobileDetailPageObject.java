@@ -21,4 +21,10 @@ public class MobileDetailPageObject extends BasePage {
 		return priceAtMobilePage.equals(priceAtMobileDetailPage);
 	}
 
+	public ShoppingCartPageObject clickToAddToCartButton() {
+		waitForElementClickable(driver, MobileDetailPageUI.ADD_TO_CART_BUTTON);
+		clickToElement(driver, MobileDetailPageUI.ADD_TO_CART_BUTTON);
+		return PageGeneratorManager.getShoppingCartPage(driver);
+	}
+
 }

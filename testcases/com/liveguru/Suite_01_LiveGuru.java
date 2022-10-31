@@ -17,6 +17,7 @@ public class Suite_01_LiveGuru extends BaseTest {
 	private AccountInformationPageObject accountInformationPage;
 	private MobilePageObject mobilePage;
 	private MobileDetailPageObject mobileDetailPage;
+	private ShoppingCartPageObject shoppingCartPage;
 	String emailAddress, firstName, lastName, password;
 	String priceAtMobilePage;
 	String priceAtMobileDetailPage;
@@ -81,8 +82,12 @@ public class Suite_01_LiveGuru extends BaseTest {
 
 	@Test
 	public void TC_05_Discount_Coupon_Work_Correctly() {
-		mobilePage = accountDashboardPage.clickToMobileMenu();
-		verifyTrue(mobileDetailPage.comparePrice(priceAtMobilePage, priceAtMobileDetailPage));
+		shoppingCartPage = mobileDetailPage.clickToAddToCartButton();
+//		shoppingCartPage = mobileDetailPage.clickToCartButton();
+		shoppingCartPage.inputToCouponCodeTextbox("GURU50");
+		shoppingCartPage.clickToApplyButton();
+		verifyEquals(shoppingCartPage.getDiscountValue(), "-$5.00");
+		verifyEquals(shoppingCartPage.getGrandTotalDiscountedPrice(), "$95.00");
 	}
 
 	@Test

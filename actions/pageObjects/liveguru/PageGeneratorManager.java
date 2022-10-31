@@ -32,4 +32,8 @@ public class PageGeneratorManager {
 		return new MobileDetailPageObject(driver);
 	}
 
+	public static ShoppingCartPageObject getShoppingCartPage(WebDriver driver) {
+		return new ShoppingCartPageObject(driver);
+	}
+
 }
